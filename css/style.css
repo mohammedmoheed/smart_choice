@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.top{
+  background-color: #1080b4;
+  padding-top:6px;
+  padding: auto;
+  color: white;
+
+}
+.top p{
+  font-size: 18px;
+}
+.social{
+  font-size: 20px;
+  text-align: right;
+  padding-right: 8px;
+}
+.social a{
+  color: rgb(253, 252, 250);
+}
