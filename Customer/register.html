@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Register Order</title>
+</head>
+<body>
+    <div class="container-fluid top">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h5>Register Order  </h5>
+                </div>
+                <div class="col-sm-3 social" id="social">
+                    <ul>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </ul>
+
+                </div>
+            </div>
+    </div>
+<!--parent div-->
+<div class="container-fluid order_panel responsive">
+    <div class="container order_panel_child">
+    <form action="register.php" method="post">
+       <div class="row">
+        <div class="col-md-12">
+            <select name="vender" id="vender" required>
+                <option>Galaxy Mens wear Nashik</option>
+                <option>Paradise Mens wear Mumbai</option>
+                <option>Zara Fashion Colaba</option>
+                <option>City Center Mall Nashik</option>
+            </select>
+            <input type="text" name="cust_name" id="cust_name" placeholder="Enter Customer Name" required>
+            <input type="text" name="del_date" id="del_date" placeholder="Enter Date of delivary" required>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-12">
+            <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" required>
+            <select name="dress" id="dress">
+                <option name ="" id="">Shirt</option>
+                <option name ="" id="">paint</option>
+                <option name ="" id="">Suit</option>
+                <option name ="" id="">Kurta</option>
+                <option name ="" id="">Sherwani</option>
+                <option name ="" id="">3 PC Coat</option>
+                <option name ="" id="">West Coat</option>
+            </select>
+        </div>
+
+       </div>
+    </div>
+    </form>
+</div>
+<!--end of parent div-->
+<div class="container Measurment">
+    <h6>Measurment</h6>
+</div>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/97ee402521.js" crossorigin="anonymous"></script>
+    <script src="js/jQuery.js"></script>
+</body>
+</html>
+

@@ -8,6 +8,6 @@ if($conn->connect_error){
     die("Connection Was Failed".$conn->connect_error);                                     
 }
 else{
-    echo "Establised";
+   // echo "Establised";
 }
 ?>
