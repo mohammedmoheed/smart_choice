@@ -170,3 +170,11 @@
   height: 35px;
   border: none;
 }
+#paint_height,#paint_seat,#waist,#thighs,#bottom,#fh,#sh,#bh,#nh{
+  text-align: center;
+  font-size: 25px;
+  width: 115px;
+  height: 35px;
+  border: none;
+
+}
