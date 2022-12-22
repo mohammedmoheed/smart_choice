@@ -30,44 +30,75 @@
 <!--parent div-->
 <div class="container-fluid order_panel responsive">
     <div class="container order_panel_child">
-    <form action="register.php" method="post">
+    <form action="register.php" method="post" id="dress_type">
        <div class="row">
         <div class="col-md-12">
-            <select name="vender" id="vender" required>
+            <label>Select the vendor</label><br>
+            <select name="vendor" id="vendor" required>
+                <option>Select vendor Name</option>
                 <option>Galaxy Mens wear Nashik</option>
                 <option>Paradise Mens wear Mumbai</option>
                 <option>Zara Fashion Colaba</option>
                 <option>City Center Mall Nashik</option>
-            </select>
+            </select><br>
             <input type="text" name="cust_name" id="cust_name" placeholder="Enter Customer Name" required>
-            <input type="text" name="del_date" id="del_date" placeholder="Enter Date of delivary" required>
+            <input type="text" name="del_date" id="del_date" placeholder="Date" required>
         </div>
        </div>
        <div class="row">
         <div class="col-md-12">
             <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" required>
-            <select name="dress" id="dress">
-                <option name ="" id="">Shirt</option>
-                <option name ="" id="">paint</option>
-                <option name ="" id="">Suit</option>
-                <option name ="" id="">Kurta</option>
-                <option name ="" id="">Sherwani</option>
-                <option name ="" id="">3 PC Coat</option>
-                <option name ="" id="">West Coat</option>
+            <label for="dress_type">Select Dress Type</label>
+            <select name="type" id="type"  onchange="showHide(this)">
+                <option value="non_select">Select option</option>
+                <option value ="shirt" name="shirt">Shirt</option>
+                <option value ="paint">paint</option>
+                <option value ="suit">Suit</option>
+                <option value ="kurta">Kurta</option>
+                <option value ="Sherwani">Sherwani</option>
+                <option value ="3 PC Coat">3 PC Coat</option>
+                <option value ="West Coat">West Coat</option>
             </select>
+            <div class="show-hide" id="non_select">
+                <div class="container">
+                    <p>Hi</p>
+                </div>
+              </div>
+            <div class="show-hide" id="shirt">
+                <div class="container">
+                    <h6>Enter the Measurment of Shirt</h6>
+                    <div class="col-md-2">
+                        <div class="card text-center">
+                            <div class="card-header  bg-info text-white">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6>Height</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                               <input type="text" name="shirt_height" id="shirt_height">
+                            </div>
+                        </div><!--end of card-->
+                    </div>
+                </div>
+              </div>
+              <div class="show-hide" id="paint">
+                You selectd paint
+              </div>
+              <div class="show-hide" id="suit">
+                You selectd Suit
+              </div>
         </div>
-
        </div>
     </div>
     </form>
 </div>
 <!--end of parent div-->
-<div class="container Measurment">
-    <h6>Measurment</h6>
-</div>
     <script src="js/bootstrap.js"></script>
     <script src="https://kit.fontawesome.com/97ee402521.js" crossorigin="anonymous"></script>
-    <script src="js/jQuery.js"></script>
+    <script src="../js/script.js"></script>
+
 </body>
 </html>
 
