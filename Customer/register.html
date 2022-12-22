@@ -41,6 +41,7 @@
                 <option>Zara Fashion Colaba</option>
                 <option>City Center Mall Nashik</option>
             </select><br>
+            <input type="text" name="cust_name" id="cust_id" placeholder="Customer Id" required><br>
             <input type="text" name="cust_name" id="cust_name" placeholder="Enter Customer Name" required>
             <input type="text" name="del_date" id="del_date" placeholder="Date" required>
         </div>
@@ -64,27 +65,159 @@
                     <p>Hi</p>
                 </div>
               </div>
-            <div class="show-hide" id="shirt">
+            <div class="show-hide" id="shirt"><!--Option start-->
                 <h6>Enter the Measurment of Shirt</h6>
-                <div class="container">
-                    <div class="col">
-                        <div class="card text-center">
-                            <div class="container Measurment_shirt">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                        <h6>Height</h6>
+                <div class="container mt-5"><!--1 start-->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary  text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Height</h5>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="card-footer">
+                                    <input type="text" name="height" id="height" responsive>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                               <input type="text" name="shirt_height" id="shirt_height">
+                        </div>
+                        <!--1 end-->
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Back Height</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="back_height" id="back_height">
+                                </div>
                             </div>
-                        </div><!--end of card-->
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+
+                                            <h5>Shoulder</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="shoulder" id="shoulder">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Chest</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="chest" id="chest">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Neck</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="neck" id="neck">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Sleev</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="sleev" id="sleev">
+                                </div>
+                            </div>
+                        </div>
+                        <!--row ending-->
                     </div>
                 </div>
-              </div>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Fix</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="fix" id="fix">
+                                </div>
+                            </div>
+                        </div><!--end of row2-->
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Stomach</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="stomach" id="stomach">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card text-center">
+                                <div class="card-header  bg-primary text-white">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5>Saet</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="text" name="seat" id="seat">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <center>
+                            <input class="btn btn-reset" type="reset" value="Reset" center><input class="btn btn-save" type="submit" value="Save">
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                
+              </div><!--end of option-->
               <div class="show-hide" id="paint">
-                You selectd paint
+                <h6>You selected paint</h6>
               </div>
               <div class="show-hide" id="suit">
                 You selectd Suit
@@ -101,4 +234,3 @@
 
 </body>
 </html>
-
