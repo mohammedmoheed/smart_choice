@@ -5,8 +5,9 @@ if(isset($_POST['submit'])){
     $cust_id =$_POST['cust_id'];
     $cust_name = $_POST['cust_name'];
     $del_date = $_POST['del_date'];
-    $reg = "INSERT INTO cust_reg (`sr`,`vendor`,`cust_id`,`cust_name`,`del_date`) VALUES (NULL ,'$vendor','$cust_id','$cust_name',
-    '$del_date',)";
+    $height = $_POST['height'];
+    $reg = "INSERT INTO meas_shirt (`sr`,`vendor`,`cust_id`,`cust_name`,`del_date`,`height`) VALUES (NULL ,'$vendor','$cust_id','$cust_name',
+    '$del_date','$height')";
     if($conn->query($reg)==TRUE){
         echo "Saved Successfully";
     }

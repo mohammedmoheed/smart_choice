@@ -30,25 +30,7 @@
 <!--parent div-->
 <div class="container-fluid order_panel responsive">
     <div class="container order_panel_child">
-    <form action="register.php" method="post" id="dress_type">
-       <div class="row">
-        <div class="col-md-12">
-            <label>Select the vendor</label><br>
-            <select name="vendor" id="vendor" required>
-                <option>Select vendor Name</option>
-                <option name="Galaxy" id="galaxy">Galaxy Mens wear Nashik</option>
-                <option name="paradise" id="paradise">Paradise Mens wear Mumbai</option>
-                <option name="zara" id="zara">Zara Fashion Colaba</option>
-            </select><br>
-            <input type="text" name="cust_id" id="cust_id" placeholder="Customer Id" required><br>
-            <input type="text" name="cust_name" id="cust_name" placeholder="Enter Customer Name" required>
-            <input type="text" name="del_date" id="del_date" placeholder="Date" required>
-        </div>
-       </div>
-       <div class="row">
-        <div class="col-md-12">
-            <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number">
-            <label for="dress_type">Select Dress Type</label>
+        <label for="dress_type">Select Dress Type</label>
             <select name="type" id="type"  onchange="showHide(this)">
                 <option value="non_select">Select option</option>
                 <option value ="shirt" name="shirt">Shirt</option>
@@ -65,7 +47,26 @@
                 </div>
               </div>
             <div class="show-hide" id="shirt"><!--Option start-->
-                <h6>Enter the Measurment of Shirt</h6>
+                <form action="register.php" method="post" id="dress_type">
+                    <div class="row">
+                     <div class="col-md-12">
+                         <label>Select the vendor</label><br>
+                         <select name="vendor" id="vendor" required>
+                             <option>Select vendor Name</option>
+                             <option name="Galaxy" id="galaxy">Galaxy Mens wear Nashik</option>
+                             <option name="paradise" id="paradise">Paradise Mens wear Mumbai</option>
+                             <option name="zara" id="zara">Zara Fashion Colaba</option>
+                         </select><br>
+                         <input type="text" name="cust_id" id="cust_id" placeholder="Customer Id" required><br>
+                         <input type="text" name="cust_name" id="cust_name" placeholder="Enter Customer Name" required>
+                         <input type="text" name="del_date" id="del_date" placeholder="Date" required>
+                     </div>
+                    </div>
+                    <div class="row">
+                     <div class="col-md-12">
+                         <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number">
+                <h5 id="head_meas">Enter the Measurment of Shirt</h5>
+                <hr>
                 <div class="container mt-5"><!--1 start-->
                     <div class="row">
                         <div class="col-md-2">
@@ -204,14 +205,15 @@
 
                     </div>
                 </div>
+                <hr>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <center>
                             <input class="btn btn-reset" type="reset" value="Reset" center>
-                            <input type="submit" name="submit" id="submit" value="submit">
-                            <input class="btn btn-save" type="submit" value="submit">
+                            <input class="btn btn-save" type="submit" value="Save" name="submit" id="submit">
                             </center>
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -367,9 +369,11 @@
                     </div>
                 </div>
               </div><!--end of paint-->
+              <!--start of suit-->
               <div class="show-hide" id="suit">
-                You selectd Suit
-              </div>
+                suit
+            </div>
+              <!--end of suit-->
         </div>
        </div>
     </div>
