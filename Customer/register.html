@@ -36,19 +36,18 @@
             <label>Select the vendor</label><br>
             <select name="vendor" id="vendor" required>
                 <option>Select vendor Name</option>
-                <option>Galaxy Mens wear Nashik</option>
-                <option>Paradise Mens wear Mumbai</option>
-                <option>Zara Fashion Colaba</option>
-                <option>City Center Mall Nashik</option>
+                <option name="Galaxy" id="galaxy">Galaxy Mens wear Nashik</option>
+                <option name="paradise" id="paradise">Paradise Mens wear Mumbai</option>
+                <option name="zara" id="zara">Zara Fashion Colaba</option>
             </select><br>
-            <input type="text" name="cust_name" id="cust_id" placeholder="Customer Id" required><br>
+            <input type="text" name="cust_id" id="cust_id" placeholder="Customer Id" required><br>
             <input type="text" name="cust_name" id="cust_name" placeholder="Enter Customer Name" required>
             <input type="text" name="del_date" id="del_date" placeholder="Date" required>
         </div>
        </div>
        <div class="row">
         <div class="col-md-12">
-            <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" required>
+            <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number">
             <label for="dress_type">Select Dress Type</label>
             <select name="type" id="type"  onchange="showHide(this)">
                 <option value="non_select">Select option</option>
@@ -209,7 +208,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <center>
-                            <input class="btn btn-reset" type="reset" value="Reset" center><input class="btn btn-save" type="submit" value="Save">
+                            <input class="btn btn-reset" type="reset" value="Reset" center>
+                            <input type="submit" name="submit" id="submit" value="submit">
+                            <input class="btn btn-save" type="submit" value="submit">
                             </center>
                         </div>
                     </div>
