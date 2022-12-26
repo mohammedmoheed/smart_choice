@@ -47,141 +47,19 @@
   height:100%
 }
 .label{
-  font-size: 70px;
+  font-size:70px;
 }
-#non_select,#shirt, #paint, #suit {
-  display: none;
-}
-#vendor{
-  padding:8px;
-  background:rgb(183, 211, 223);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  color: #050505;
-  cursor: pointer;
-}
-#vendor:hover{
-  color: #043f5a;
-  background-color: rgb(80, 196, 211);
-}
-#cust_id{
-  width: 150px;
-  height: 45px;
-  border:2px solid #aaa;
-  border-radius: 6px;
-  margin: 2px 0;
-  outline:none;
-  border-sizing:border-box;
-  transition:.3s;
-  font-size: 18px;
 
+#myModal{
+  width:80%;
 }
-#cust_name{
-  width: 500px;
-  height: 45px;
-  border:2px solid #aaa;
-  border-radius: 6px;
-  margin: 8px 0;
-  outline:none;
-  border-sizing:border-box;
-  transition:.3s;
-  font-size: 18px;
+.modal-content{
+  width: 180%;
 }
-#cust_name:hover{
-  box-shadow: 1px 3px rgb(5, 5, 5);
+.modal-header{
+  width: 100%;
 }
-#del_date{
-  margin-left: 400px;
-  width: 100px;
-  height: 45px;
-  border:2px solid #aaa;
-  border-radius: 6px;
-  outline:none;
-  border-sizing:border-box;
-  transition:.3s;
-  font-size: 18px;
-}
-#del_date:hover{
-  box-shadow: 1px 3px rgb(19, 20, 20);
-}
-#mobile:hover{
-  box-shadow: 1px 3px rgb(15, 15, 15);
-}
-#mobile{
-  width: 250px;
-  height: 45px;
-  border:2px solid #aaa;
-  border-radius: 6px;
-  outline:none;
-  border-sizing:border-box;
-  transition:.3s;
-  font-size: 18px;
-} 
-#type{
-  padding:8px;
-  background:rgb(183, 211, 223);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  color: #050505;
-  cursor: pointer;
-}
-#type:hover{
-  color: #043f5a;
-  background-color: rgb(80, 196, 211);
-}
-.cardd{
-  width: 120px;
-  font-weight: 700;
-  border: none;
-}
-#shirt_height{
-  width:80px;
-  height:35px;
-  outline: none;
-  font-size: 20px;
-  text-align: center;
+#height,#shoulder,#chest,#sleev,#neck,#bh,#fix,#stomach,#seat,#cuff,#collar{
+  width: 70px;
 
-}
-.btn-reset{
-  padding-top: 6px;
-  background-color: rgb(204, 68, 68);
-  color: white;
-  font-size: 25px;
-  width: 150px;
-  height: 60px;
-  margin-top: 8px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-}
-.btn-save{
-  padding-top: 6px;
-  background-color: rgb(9, 114, 74);
-  color: white;
-  font-size: 25px;
-  width: 150px;
-  height: 60px;
-  margin-top: 8px;
-  margin-left: 2px;
-  margin-bottom: 10px;
-
-}
-#height,#back_height,#shoulder,#chest,#neck,#sleev,#fix,#stomach,#seat{
-  text-align: center;
-  font-size: 25px;
-  width: 115px;
-  height: 35px;
-  border: none;
-}
-#paint_height,#paint_seat,#waist,#thighs,#bottom,#fh,#sh,#bh,#nh{
-  text-align: center;
-  font-size: 25px;
-  width: 115px;
-  height: 35px;
-  border: none;
-
-}
-#head_meas{
-  font-size: 19px;
-  margin-top: 25px;
-  color: #070707;
 }
