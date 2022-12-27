@@ -3,10 +3,10 @@
 	include_once('connection.php');
 
 	if(isset($_POST['add'])){
-		$name = $_POST['name'];
+		$ven_name = $_POST['ven_name'];
 		$mobile = $_POST['mobile'];
 		$city = $_POST['city'];
-		$sql = "INSERT INTO vendors (name, mobile, city) VALUES ('$name', '$mobile', '$city')";
+		$sql = "INSERT INTO vendors (ven_name, mobile, city) VALUES ('$ven_name', '$mobile', '$city')";
 
 		//use for MySQLi OOP
 		if($conn->query($sql)){

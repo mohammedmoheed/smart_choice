@@ -49,8 +49,7 @@
 .label{
   font-size:70px;
 }
-
-#myModal{
+/*#myModal{
   width:80%;
 }
 .modal-content{
@@ -58,8 +57,11 @@
 }
 .modal-header{
   width: 100%;
-}
+}*/
 #height,#shoulder,#chest,#sleev,#neck,#bh,#fix,#stomach,#seat,#cuff,#collar{
   width: 70px;
 
+}
+#vendor{
+  width: 60px;
 }

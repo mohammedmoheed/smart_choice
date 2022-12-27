@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,11 +66,10 @@
                             <label>Date of Delivary</label>
                             <input type="text" name="del_date" id="del_date">
                             <label>Choose Vendor</label>
-                            <select>
-                              <option>select</option>
-                              <option>Zara Colaba</option>
-                              <option>Smart collection</option>
-                              <option>indian Boutique</option>
+                            <select name="vendor" id="vendor">
+                              <option value="-">select</option>
+                              <option name="zara-colaba" id="zara-colaba" value="zara-colaba">Zara Colaba</option>
+                              <option name="smart-collection" id="smart-collection" value="smart-collection" >Smart collection</option>
                             </select>
                             <hr>
                             <div class="row">
@@ -101,8 +103,8 @@
                                 <label id="measurment">Remark</label>
                                 <input type="text" id="rem" name="rem">
                                 <center>
-                                  <button type="reset" class="btn btn-danger">Danger</button>
-                                  <button type="submit" class="btn btn-success">Save</button>
+                                  <button type="reset" class="btn btn-danger">Reset</button>
+                                  <input type="submit" class="btn btn-success" value="save" name="submit" id="submit">
                                 </center>
     
                             </div>
@@ -110,8 +112,7 @@
                         </div>
                             </div>
                           </div>
-                        
-                         <!-- #height,#shoulder,#chest,#sleev,#neck,#back_height,#fix,#stomach,#seat,#cuff-->
+                  
 
                       </form>
                       <form id="form2"><input type="text" value="form 2" /></form>

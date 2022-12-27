@@ -18,13 +18,16 @@ if(isset($_POST['submit'])){
     $collar = $_POST['collar'];
     $rem = $_POST['rem'];
 
-$sql = "INSERT INTO shirt_reg (`cust_name`,`cust_id`,`del_date`,`vendor`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
+$sql = "INSERT INTO shirt_reg (`sr`,`cust_name`,`cust_id`,`del_date`,`vendor`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
 ,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`)
  VALUES (null,'$cust_name','$cust_id','$del_date','$vendor','$height','$shoulder','$chest','$sleev'
 ,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem')";
 
 if($conn->query($sql) == TRUE){
-    echo "Saved Successfully";
+     echo '<script>
+                alert("Saved Successfully")
+                window.location ="register.php";
+            </script>';
 }
 else{
     echo"failed to save";

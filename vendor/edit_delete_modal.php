@@ -15,7 +15,7 @@
 						<label class="control-label modal-label">Name:</label>
 					</div>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" name="name" value="<?php echo $row['name']; ?>">
+						<input type="text" class="form-control" name="ven_name" value="<?php echo $row['ven_name']; ?>">
 					</div>
 				</div>
 				<div class="row form-group">
@@ -56,7 +56,7 @@
             </div>
             <div class="modal-body">	
             	<p class="text-center">Are you sure you want to Delete</p>
-				<h2 class="text-center"><?php echo $row['name'].' '.$row['mobile']; ?></h2>
+				<h2 class="text-center"><?php echo $row['ven_name'].' '.$row['mobile']; ?></h2>
 			</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
