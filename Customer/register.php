@@ -20,6 +20,11 @@ include('../connection.php');
       #measurment{
         width: 100px;
       }
+      .mycss{
+        height:30px;
+        width:250px;
+      }
+  
     </style>
 </head>
 <body>
@@ -61,25 +66,56 @@ include('../connection.php');
                         <div class="container">
                           <div class="row">
                             <div class="col-sm-12">
-                              <label>Customer Name:</label><input type="text" name="cust_name" id="cust_name">
-                        <label>Customer Id:</label><input type="text" name="cust_id" id="cust_id">
+                              <label>Customer Name:</label>
+                              <?php
+                            $sql3 = "SELECT id, cust_name FROM customer";
+                            $result3 = mysqli_query($conn, $sql3);
+                            if ($result3) {
+                                    
+                                    echo '<select name="cust_name" class="mycss" important>';
+                                    echo '<option>select</option>';
+                                    while ($row = mysqli_fetch_assoc($result3)) {
+                                        echo '<option value="' . $row['cust_name'] . '">' . $row['cust_name'] . ' '  . '</option>';
+                                    }
+                                    echo '</select>';
+                                } else {
+                                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                                }
+                                ?>
                         <div class="row">
                           <div class="col">
                             <label>Date of Delivary</label>
-                            <input type="text" name="del_date" id="del_date">
+                            <input type="text" name="del_date" id="del_date" class="mycss">
                             <label>Choose Vendor</label>
                             <?php
                             $sql = "SELECT id, ven_name FROM vendors";
                             $result = mysqli_query($conn, $sql);
                             if ($result) {
                                     
-                                    echo '<select name="vendor">';
+                                    echo '<select name="vendor" class="mycss">';
+                                    echo '<option>select</option>';
                                     while ($row = mysqli_fetch_assoc($result)) {
                                         echo '<option value="' . $row['ven_name'] . '">' . $row['ven_name'] . ' '  . '</option>';
                                     }
                                     echo '</select>';
                                 } else {
                                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                                }
+                                ?>
+                                <label>Choose Employee</label>
+                                <?php
+                            $sql2 = "SELECT id, emp_name FROM employee";
+                            $result2 = mysqli_query($conn, $sql2);
+                            if ($result2) {
+                                    
+                                    echo '<select name="employee" id="employee" class="mycss">';
+                                    echo '<option>select</option>';
+                                    while ($row = mysqli_fetch_assoc($result2)) {
+                                        echo '<option value="' . $row['emp_name'] . '">' . $row['emp_name'] . ' '  . '</option>';
+                                    }
+                                    echo '</select>';
+                                } else {
+                                    echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
                                 }
 
                                 mysqli_close($conn);
@@ -117,7 +153,9 @@ include('../connection.php');
                                 <input type="text" id="collar" name="collar">
                                 <br>
                                 <label id="measurment">Remark</label>
-                                <input type="text" id="rem" name="rem">
+                                <input type="text" id="rem" name="rem" class="mycss">
+                                <hr>
+ 
                                 <center>
                                   <button type="reset" class="btn btn-danger">Reset</button>
                                   <input type="submit" class="btn btn-success" value="save" name="submit" id="submit">
@@ -128,7 +166,6 @@ include('../connection.php');
                         </div>
                             </div>
                           </div>
-                  
 
                       </form>
                       <form id="form2"><input type="text" value="form 2" /></form>
@@ -162,5 +199,6 @@ $('#formSel').change( function() {
 });
 
     </script>
+    
 </body>
 </html>

@@ -51,17 +51,20 @@
 }
 /*#myModal{
   width:80%;
+  max-width: fit-content;
 }
 .modal-content{
   width: 180%;
+  max-width: fit-content;
 }
 .modal-header{
   width: 100%;
+  max-width: fit-content;
 }*/
 #height,#shoulder,#chest,#sleev,#neck,#bh,#fix,#stomach,#seat,#cuff,#collar{
-  width: 70px;
+  width: 90px;
 
 }
-#vendor{
-  width: 60px;
+#rem{
+  width: 290px;
 }

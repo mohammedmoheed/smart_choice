@@ -3,11 +3,11 @@
 	include_once('connection.php');
 
 	if(isset($_POST['add'])){
-		$name = $_POST['name'];
+		$emp_name = $_POST['emp_name'];
 		$mobile = $_POST['mobile'];
 		$city = $_POST['city'];
 		$payment = $_POST['payment'];
-		$sql = "INSERT INTO employee (name, mobile, city, payment) VALUES ('$name', '$mobile', '$city', '$payment')";
+		$sql = "INSERT INTO employee (emp_name, mobile, city, payment) VALUES ('$emp_name', '$mobile', '$city', '$payment')";
 
 		//use for MySQLi OOP
 		if($conn->query($sql)){

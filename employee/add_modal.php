@@ -14,7 +14,7 @@
 						<label class="control-label modal-label">Name:</label>
 					</div>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" name="name" required>
+						<input type="text" class="form-control" name="emp_name" required>
 					</div>
 				</div>
 				<div class="row form-group">

@@ -77,7 +77,7 @@
 								echo 
 								"<tr>
 									<td>".$row['id']."</td>
-									<td>".$row['name']."</td>
+									<td>".$row['emp_name']."</td>
 									<td>".$row['mobile']."</td>
 									<td>".$row['city']."</td>
 									<td>".$row['payment']."</td>

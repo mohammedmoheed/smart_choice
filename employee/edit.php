@@ -4,11 +4,11 @@
 
 	if(isset($_POST['edit'])){
 		$id = $_POST['id'];
-		$name = $_POST['name'];
+		$emp_name = $_POST['emp_name'];
 		$mobile = $_POST['mobile'];
 		$city = $_POST['city'];
 		$payment = $_POST['payment'];
-		$sql = "UPDATE employee SET name = '$name', mobile = '$mobile', city = '$city', payment = '$payment' WHERE id = '$id'";
+		$sql = "UPDATE employee SET name = '$emp_name', mobile = '$mobile', city = '$city', payment = '$payment' WHERE id = '$id'";
 
 		//use for MySQLi OOP
 		if($conn->query($sql)){

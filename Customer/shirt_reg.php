@@ -2,7 +2,6 @@
 include('../connection.php');
 if(isset($_POST['submit'])){
     $cust_name = $_POST['cust_name'];
-    $cust_id = $_POST['cust_id'];
     $del_date = $_POST['del_date'];
     $vendor = $_POST['vendor'];
     $height = $_POST['height'];
@@ -18,9 +17,9 @@ if(isset($_POST['submit'])){
     $collar = $_POST['collar'];
     $rem = $_POST['rem'];
 
-$sql = "INSERT INTO shirt_reg (`sr`,`cust_name`,`cust_id`,`del_date`,`vendor`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
+$sql = "INSERT INTO shirt_reg (`sr`,`cust_name`,`del_date`,`vendor`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
 ,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`)
- VALUES (null,'$cust_name','$cust_id','$del_date','$vendor','$height','$shoulder','$chest','$sleev'
+ VALUES (null,'$cust_name','$del_date','$vendor','$height','$shoulder','$chest','$sleev'
 ,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem')";
 
 if($conn->query($sql) == TRUE){
