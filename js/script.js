@@ -7,3 +7,7 @@ $('#formSel').change( function() {
         $('#myModal').modal('show');
     }
 });
+
+$(document).ready( function () {
+    $('#myTable').DataTable();
+    } );

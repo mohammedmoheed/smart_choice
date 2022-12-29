@@ -10,6 +10,7 @@ include('../connection.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/datatable.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Order</title>
     <style type="text/css">
@@ -128,29 +129,29 @@ include('../connection.php');
                               <div class="col">
                                 <h6>Enter The Measurment of Shirt</h6>
                                 <label id="measurment">Height</label>
-                                <input type="text" id="height" name="height">
+                                <input type="text" id="height" name="height" required>
                                 <label id="measurment">Shoulder</label>
-                                <input type="text" id="shoulder" name="shoulder">
+                                <input type="text" id="shoulder" name="shoulder" required>
                                 <label id="measurment">Chest</label>
-                                <input type="text" id="chest" name="chest">
+                                <input type="text" id="chest" name="chest" required>
                                 <label id="measurment">Sleev</label>
-                                <input type="text" id="sleev" name="sleev">
+                                <input type="text" id="sleev" name="sleev" required>
                                 <br>
                                 <label id="measurment">Neck</label>
-                                <input type="text" id="neck" name="neck">
+                                <input type="text" id="neck" name="neck" required>
                                 <label id="measurment">Back Height</label>
-                                <input type="text" id="bh" name="bh">
+                                <input type="text" id="bh" name="bh" required>
                                 <label id="measurment">Fix-chest</label>
-                                <input type="text" id="fix" name="fix">
+                                <input type="text" id="fix" name="fix" required>
                                 <label id="measurment">Stomach</label>
-                                <input type="text" id="stomach" name="stomach">
+                                <input type="text" id="stomach" name="stomach" required>
                                 <br>
                                 <label id="measurment">Seat</label>
-                                <input type="text" id="seat" name="seat">
+                                <input type="text" id="seat" name="seat" required>
                                 <label id="measurment">Cuff</label>
-                                <input type="text" id="cuff" name="cuff">
+                                <input type="text" id="cuff" name="cuff" required>
                                 <label id="measurment">Collar</label>
-                                <input type="text" id="collar" name="collar">
+                                <input type="text" id="collar" name="collar" required>
                                 <br>
                                 <label id="measurment">Remark</label>
                                 <input type="text" id="rem" name="rem" class="mycss">
@@ -175,30 +176,37 @@ include('../connection.php');
                 </div><!-- .modal-dialog -->
               </div><!-- .modal -->
         </div>
+ </div><!-- chiled div--><br>
+                              <div class="container display_section">
+                                <?php
+                                include('../connection.php');
+                              $display = mysqli_query($conn, "SELECT * FROM shirt_reg");
+echo "<h5>order Recieved</h5>";
+echo "<table id='myTable' class='table table-striped table-bordered' style='width:100%'>";
+echo "<thead>";
+    echo "<th>id</th>";                        
+    echo "<th>Customer Name</th>";
+    echo "<th>date of Delivary</th>";
+    echo "</thead>";
+while ($row = mysqli_fetch_assoc($display)) {
+  echo "<tr>";
+    echo "<td>" . $row['sr'] . "</td>";
+    echo "<td>" . $row['cust_name'] . "</td>";
+    echo "<td>" . $row['del_date'] . "</td>";
+   
+}
 
-      </div>
+echo "</table>";
+?>
 
-      
-    
+                              </div>
+                              </div><!-- parent div-->
+
     <script src="https://kit.fontawesome.com/97ee402521.js" crossorigin="anonymous"></script>
-    <script src="../js/script.js"></script>
     <script src="../js/jQuery.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="../js/datatable.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script>
-        //$('#myModal').modal('show');
-
-$('#formSel').change( function() {
-    var id = $(this).val();
-    if( id != '-' )
-    {
-        $('form').hide();
-        $('#form'+id).show();
-        $('#myModal').modal('show');
-    }
-});
-
-    </script>
+    <script type="text/javascript" src="../js/script.js"></script>
     
 </body>
 </html>
