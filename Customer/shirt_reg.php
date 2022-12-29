@@ -1,9 +1,11 @@
 <?php
 include('../connection.php');
 if(isset($_POST['submit'])){
+    $type = 'shirt';
     $cust_name = $_POST['cust_name'];
     $del_date = $_POST['del_date'];
     $vendor = $_POST['vendor'];
+    $emp_name=$_POST['emp_name'];
     $height = $_POST['height'];
     $shoulder = $_POST['shoulder'];
     $chest = $_POST['chest'];
@@ -17,9 +19,9 @@ if(isset($_POST['submit'])){
     $collar = $_POST['collar'];
     $rem = $_POST['rem'];
 
-$sql = "INSERT INTO shirt_reg (`sr`,`cust_name`,`del_date`,`vendor`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
+$sql = "INSERT INTO orders (`sr`,`type`,`cust_name`,`del_date`,`vendor`,`emp_name`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
 ,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`)
- VALUES (null,'$cust_name','$del_date','$vendor','$height','$shoulder','$chest','$sleev'
+ VALUES (null,'$type','$cust_name','$del_date','$vendor','$emp_name','$height','$shoulder','$chest','$sleev'
 ,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem')";
 
 if($conn->query($sql) == TRUE){

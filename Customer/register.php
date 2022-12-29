@@ -86,7 +86,7 @@ include('../connection.php');
                         <div class="row">
                           <div class="col">
                             <label>Date of Delivary</label>
-                            <input type="text" name="del_date" id="del_date" class="mycss">
+                            <input type="date" name="del_date" id="del_date" class="mycss">
                             <label>Choose Vendor</label>
                             <?php
                             $sql = "SELECT id, ven_name FROM vendors";
@@ -109,7 +109,7 @@ include('../connection.php');
                             $result2 = mysqli_query($conn, $sql2);
                             if ($result2) {
                                     
-                                    echo '<select name="employee" id="employee" class="mycss">';
+                                    echo '<select name="emp_name" id="emp_name" class="mycss">';
                                     echo '<option>select</option>';
                                     while ($row = mysqli_fetch_assoc($result2)) {
                                         echo '<option value="' . $row['emp_name'] . '">' . $row['emp_name'] . ' '  . '</option>';
@@ -175,30 +175,13 @@ include('../connection.php');
                   </div><!-- .modal-content -->
                 </div><!-- .modal-dialog -->
               </div><!-- .modal -->
-        </div>
+              
+        </div><hr>
  </div><!-- chiled div--><br>
-                              <div class="container display_section">
-                                <?php
-                                include('../connection.php');
-                              $display = mysqli_query($conn, "SELECT * FROM shirt_reg");
-echo "<h5>order Recieved</h5>";
-echo "<table id='myTable' class='table table-striped table-bordered' style='width:100%'>";
-echo "<thead>";
-    echo "<th>id</th>";                        
-    echo "<th>Customer Name</th>";
-    echo "<th>date of Delivary</th>";
-    echo "</thead>";
-while ($row = mysqli_fetch_assoc($display)) {
-  echo "<tr>";
-    echo "<td>" . $row['sr'] . "</td>";
-    echo "<td>" . $row['cust_name'] . "</td>";
-    echo "<td>" . $row['del_date'] . "</td>";
-   
-}
-
-echo "</table>";
-?>
-
+ <div class="container display_section">
+  <?php
+  include('order_display.php');
+  ?>
                               </div>
                               </div><!-- parent div-->
 
