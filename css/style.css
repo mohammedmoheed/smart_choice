@@ -50,20 +50,9 @@
 .label{
   font-size:70px;
 }
-/*#myModal{
-  width:80%;
-  max-width: fit-content;
-}
-.modal-content{
-  width: 180%;
-  max-width: fit-content;
-}
-.modal-header{
-  width: 100%;
-  max-width: fit-content;
-}*/
+
 #height,#shoulder,#chest,#sleev,#neck,#bh,#fix,#stomach,#seat,#cuff,#collar{
-  width: 90px;
+  width: 80px;
 
 }
 #rem{

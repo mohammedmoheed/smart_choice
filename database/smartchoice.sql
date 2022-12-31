@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2022 at 07:32 AM
+-- Generation Time: Dec 31, 2022 at 06:06 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -43,7 +43,8 @@ CREATE TABLE `customer` (
 INSERT INTO `customer` (`id`, `cust_name`, `mobile`, `city`, `payment`, `time`) VALUES
 (1, 'ansari shahnawaz', '7020481235', 'malegaon', '0', '0000-00-00 00:00:00.000000'),
 (2, 'Irfan Khan Quddus Khan Dehelvi', '95766854785', 'Delhi ', '0', '2022-12-28 07:17:25.655681'),
-(3, 'Gulam Husain Chacha', '98986898989', 'Lucknow', '150', '2022-12-28 12:07:07.728293');
+(3, 'Gulam Husain Chacha', '98986898989', 'Lucknow', '150', '2022-12-28 12:07:07.728293'),
+(4, 'qadeer khan', '702688556', 'Mysore', '0', '2022-12-31 16:21:47.467232');
 
 -- --------------------------------------------------------
 
@@ -110,7 +111,9 @@ INSERT INTO `orders` (`sr`, `type`, `cust_name`, `del_date`, `vendor`, `emp_name
 (16, 'shirt', 'ansari shahnawaz', '25/12', 'saad', '', '20', '158', '6', '55', '555', '887', '78', '782', '568', '255', '5', 'not', '2022-12-29 12:04:13.42398'),
 (17, 'shirt', 'ansari shahnawaz', '25/12', 'saad', '', '20', '158', '6', '55', '555', '887', '78', '782', '568', '5', '5', 'not', '2022-12-29 15:39:26.88808'),
 (18, 'shirt', 'Gulam Husain Chacha', '2022-12-29', 'kashif', '', '20', '158', '6', '55', '555', '887', '78', '782', '568', '255', '5', 'not', '2022-12-29 15:57:25.12130'),
-(19, 'shirt', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-01', 'ansari shahnawaz', 'saud', '20', '11', '20', '21', '31', '25', '64', '25', '26', '25', '11', '24', '2022-12-29 16:13:22.77170');
+(19, 'shirt', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-01', 'ansari shahnawaz', 'saud', '20', '11', '20', '21', '31', '25', '64', '25', '26', '25', '11', '24', '2022-12-29 16:13:22.77170'),
+(20, 'shirt', 'qadeer khan', '2022-12-31', 'SD mens wear', 'Ansari Shahbaz ', '20', '158', '6', '55', '555', '887', '78', '782', '568', '255', '5', 'not', '2022-12-31 16:23:11.87332'),
+(21, 'shirt', 'ansari shahnawaz', '2022-12-17', 'maaz', 'Ansari Shahbaz ', '20', '25', '230', '5', '55', '5', '5', '5', '5', '5', '5', '5', '2022-12-31 16:26:29.11657');
 
 -- --------------------------------------------------------
 
@@ -155,7 +158,8 @@ INSERT INTO `vendors` (`id`, `ven_name`, `mobile`, `city`, `time`) VALUES
 (1, 'saad', '1234567', 'malegaon', '2022-12-24 10:59:28'),
 (2, 'maaz', '9546793', 'male', '2022-12-24 10:59:28'),
 (3, 'kashif', '13489745', 'malegaon', '2022-12-24 10:59:28'),
-(10, 'ansari shahnawaz', '7020481235', 'Malegaon', '2022-12-27 16:42:39');
+(10, 'ansari shahnawaz', '7020481235', 'Malegaon', '2022-12-27 16:42:39'),
+(11, 'SD mens wear', '720486875', 'Malegaon', '2022-12-31 16:22:24');
 
 --
 -- Indexes for dumped tables
@@ -199,7 +203,7 @@ ALTER TABLE `vendors`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -211,7 +215,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `sr` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `sr` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `test`
@@ -223,7 +227,7 @@ ALTER TABLE `test`
 -- AUTO_INCREMENT for table `vendors`
 --
 ALTER TABLE `vendors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
