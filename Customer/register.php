@@ -120,7 +120,6 @@ include('../connection.php');
                                     echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
                                 }
 
-                                mysqli_close($conn);
                                 ?>
 
                         
@@ -181,6 +180,77 @@ include('../connection.php');
                                 <label id="measurment">Remark</label>
                                 <input type="text" id="rem" name="rem" class="mycss">
                                 <hr>
+                                <h6>Enter The measurment of paint</h6>
+                                <label>Choose Employee</label>
+                                <?php
+                            $sql4 = "SELECT id, emp_name FROM employee";
+                            $result4 = mysqli_query($conn, $sql4);
+                            if ($result4) {
+                                    
+                                    echo '<select name="paint_emp_name" id="paint_emp_name" class="mycss">';
+                                    echo '<option>select</option>';
+                                    while ($row = mysqli_fetch_assoc($result4)) {
+                                        echo '<option value="' . $row['emp_name'] . '">' . $row['emp_name'] . ' '  . '</option>';
+                                    }
+                                    echo '</select>';
+                                } else {
+                                    echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
+                                }
+
+                                mysqli_close($conn);
+                                ?>
+                                <br>
+                                <label id="paint_measurment">type</label>
+                                <lable>Paint</label>
+                                <input type="checkbox" name="paint_type[]" id="paint" Value="paint">
+                                <lable>Pajama</label>
+                                <input type="checkbox" name="paint_type[]" id="pajama" Value="pajama">
+                                <lable>Salwar</label>
+                                <input type="checkbox" name="paint_type[]" id="salwar" Value="salwar">
+                                <lable>Trouser</label>
+                                <input type="checkbox" name="paint_type[]" id="trouser" Value="trouser">
+                                <lable>Lungi</label>
+                                <input type="checkbox" name="paint_type[]" id="lungi" Value="lungi">
+                                <lable>Dhoti</label>
+                                <input type="checkbox" name="paint_type[]" id="dhoti" Value="dhoti">
+                                <br>
+                                <label>Quantity</label>
+                                <input type="text" name="quantity" id="quantity">
+                                <br>
+                                <label>Upload file</label>
+                                <input type="file" name="uploadfile1">
+                                <br>
+                                <label id="measurment">Height</label>
+                                <input type="text" id="pheight" name="pheight">
+                                <label id="measurment">Seat</label>
+                                <input type="text" id="seat" name="seat">
+                                <label id="measurment">Waist</label>
+                                <input type="text" id="waist" name="waist">
+                                <label id="measurment">Thighs</label>
+                                <input type="text" id="thighs" name="thighs">
+                                <br>
+                                <label id="measurment">Bottom</label>
+                                <input type="text" id="bottom" name="bottom">
+                                <label id="measurment">Fix.H</label>
+                                <input type="text" id="fh" name="fh">
+                                <label id="measurment">Side.H</label>
+                                <input type="text" id="sh" name="sh">
+                                <label id="measurment">Back.H</label>
+                                <input type="text" id="pbh" name="pbh">
+                                <br>
+                                <label id="measurment">Knee.H</label>
+                                <input type="text" id="kn" name="kn">
+                                <label id="measurment">Plates</label>
+                                <input type="text" id="plates" name="plates">
+                                <label id="measurment">Pocket</label>
+                                <input type="text" id="pocket" name="pocket">
+                                <br>
+                                <label id="measurment">Remark</label>
+                                <input type="text" id="prem" name="prem" class="mycss">
+                                
+                                
+
+
  
                                 <center>
                                   <button type="reset" class="btn btn-danger">Reset</button>
