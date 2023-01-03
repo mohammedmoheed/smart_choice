@@ -30,6 +30,7 @@ echo "<h5>order Recieved</h5>";
 echo "<table id='myTable' class='table table-striped table-bordered' style='width:100%'>";
 
 echo "<thead>";
+echo "<th>Status</th>";
 echo "<th width='4%'>id</th>";           
 echo "<th width='3%'>Type</th>";             
 echo "<th width='20%'>Customer Name</th>";
@@ -57,6 +58,16 @@ echo "</thead>";
                 {
                     ?>
                     <tr>
+                        <td>
+                            <?php
+                            if($row['status']==1) {
+                                echo '<p> <a href="status.php?sr='.$row['sr'].'&status=0" class="btn btn-success"> Complete </a> </p> ';
+                            }
+                            else{
+                                echo '<p> <a href="status.php?sr='.$row['sr'].'&status=1" class="btn btn-danger"> Incomplete </a> </p> ';
+                            }
+                            ?>
+                        </td>
                         <td><?= $row['sr']; ?></td>
                         <td><?= $row['type']; ?></td>
                         <td><?= $row['cust_name']; ?></td>
@@ -83,6 +94,19 @@ echo "</thead>";
         else{
             while ($row = mysqli_fetch_assoc($display)) {
                 echo "<tr>";
+                ?>
+                
+                <td>
+                    <?php
+                    if($row['status']==1) {
+                        echo '<p> <a href="status.php?sr='.$row['sr'].'&status=0" class="btn btn-success"> Complete </a> </p> ';
+                    }
+                    else{
+                        echo '<p> <a href="status.php?sr='.$row['sr'].'&status=1" class="btn btn-danger"> Incomplete </a> </p> ';
+                    }
+                    ?>
+                </td>
+                <?php
                 echo "<td>" . $row['sr'] . "</td>";
                 echo "<td>" . $row['type'] . "</td>";
                 echo "<td>" . $row['cust_name'] . "</td>";

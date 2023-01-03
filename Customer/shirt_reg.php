@@ -20,9 +20,9 @@ if(isset($_POST['submit'])){
     $rem = $_POST['rem'];
 
 $sql = "INSERT INTO orders (`sr`,`type`,`cust_name`,`del_date`,`vendor`,`emp_name`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
-,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`)
+,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`,'status')
  VALUES (null,'$type','$cust_name','$del_date','$vendor','$emp_name','$height','$shoulder','$chest','$sleev'
-,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem')";
+,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem',0)";
 
 if($conn->query($sql) == TRUE){
      echo '<script>
