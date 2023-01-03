@@ -63,7 +63,7 @@ include('../connection.php');
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                      <form id="form1" action="shirt_reg.php" method="post">
+                      <form id="form1" action="shirt_reg.php" method="post" enctype="multipart/form-data">
                         <div class="container">
                           <div class="row">
                             <div class="col-sm-12">
@@ -129,30 +129,54 @@ include('../connection.php');
                             <div class="row">
                               <div class="col">
                                 <h6>Enter The Measurment of Shirt</h6>
+                                <label id="measurment">type</label>
+                                <lable>Shirt</label>
+                                <input type="checkbox" name="type[]" id="shirt" Value="shirt">
+                                <lable>kurta</label>
+                                <input type="checkbox" name="type[]" id="kurta" Value="kurta">
+                                <lable>sherwani</label>
+                                <input type="checkbox" name="type[]" id="sherwani" Value="sherwani">
+                                <lable>safari</label>
+                                <input type="checkbox" name="type[]" id="safari" Value="safari">
+                                <lable>Jodhpuri</label>
+                                <input type="checkbox" name="type[]" id="Jodhpuri" Value="Jodhpuri">
+                                <lable>coat</label>
+                                <input type="checkbox" name="type[]" id="coat" Value="coat">
+                                <lable>west-coat</label>
+                                <input type="checkbox" name="type[]" id="west-coat" Value="west-coat">
+                                <lable>Sadri</label>
+                                <input type="checkbox" name="type[]" id="Sadri" Value="Sadri">
+                                <br>
+                                <label id="measurment">Quantity</label>
+                                <input type="text" id="quantity" name="quantity">
+                                <br>
+                                <label>Upload file</label>
+                                <input type="file" name="uploadfile">
+                                <br>
                                 <label id="measurment">Height</label>
-                                <input type="text" id="height" name="height" required>
+                                <input type="text" id="height" name="height">
                                 <label id="measurment">Shoulder</label>
-                                <input type="text" id="shoulder" name="shoulder" required>
+                                <input type="text" id="shoulder" name="shoulder">
                                 <label id="measurment">Chest</label>
-                                <input type="text" id="chest" name="chest" required>
+                                <input type="text" id="chest" name="chest">
                                 <label id="measurment">Sleev</label>
-                                <input type="text" id="sleev" name="sleev" required>
+                                <input type="text" id="sleev" name="sleev">
                                 <br>
                                 <label id="measurment">Neck</label>
-                                <input type="text" id="neck" name="neck" required>
+                                <input type="text" id="neck" name="neck">
                                 <label id="measurment">Back.H</label>
-                                <input type="text" id="bh" name="bh" required>
+                                <input type="text" id="bh" name="bh">
                                 <label id="measurment">Fix-chest</label>
-                                <input type="text" id="fix" name="fix" required>
+                                <input type="text" id="fix" name="fix">
                                 <label id="measurment">Stomach</label>
-                                <input type="text" id="stomach" name="stomach" required>
+                                <input type="text" id="stomach" name="stomach">
                                 <br>
                                 <label id="measurment">Seat</label>
-                                <input type="text" id="seat" name="seat" required>
+                                <input type="text" id="seat" name="seat">
                                 <label id="measurment">Cuff</label>
-                                <input type="text" id="cuff" name="cuff" required>
+                                <input type="text" id="cuff" name="cuff">
                                 <label id="measurment">Collar</label>
-                                <input type="text" id="collar" name="collar" required>
+                                <input type="text" id="collar" name="collar">
                                 <br>
                                 <label id="measurment">Remark</label>
                                 <input type="text" id="rem" name="rem" class="mycss">
@@ -184,150 +208,7 @@ include('../connection.php');
   include('order_display.php');
   ?>
   </div>
-  <!--edit modal start-->
-  <div class="modal fade edit-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <!-- mal material-->
-        <form action="shirt_edit.php" method="post">
-          <br>
-        <h5 style="text-align:center;">Update the Measurment</h5>
-        <br>
-				<input type="hidden" class="form-control" name="id" ?>
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-sm-12">
-                              <label>Customer Name:</label>
-                              <?php
-                            $sql3 = "SELECT id, cust_name FROM customer";
-                            $result3 = mysqli_query($conn, $sql3);
-                            if ($result3) {
-                                    
-                                    echo '<select name="cust_name" class="mycss">';
-                                    echo '<option>'.$row['cust_name'].'</option>';
-                                    echo '<option>select</option>';
-                                    while ($row = mysqli_fetch_assoc($result3)) {
-                                        echo '<option value="' . $row['cust_name'] . '">' . $row['cust_name'] . ' '  . '</option>';
-                                    }
-                                    echo '</select>';
-                                } else {
-                                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                                }
-                                ?>
-                        <div class="row">
-                          <div class="col">
-                            <label>Date of Delivary</label>
-                            <input type="date" name="del_date" id="del_date" class="mycss"><br>
-                            <label>Choose Vendor</label>
-                            <?php
-                            $sql = "SELECT id, ven_name FROM vendors";
-                            $result = mysqli_query($conn, $sql);
-                            if ($result) {
-                                    
-                                    echo '<select name="vendor" class="mycss">';
-                                    echo '<option>select</option>';
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        echo '<option value="' . $row['ven_name'] . '">' . $row['ven_name'] . ' '  . '</option>';
-                                    }
-                                    echo '</select>';
-                                } else {
-                                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                                }
-                                ?>
-                                <br>
-                                <label>Choose Employee</label>
-                                <?php
-                            $sql2 = "SELECT id, emp_name FROM employee";
-                            $result2 = mysqli_query($conn, $sql2);
-                            if ($result2) {
-                                    
-                                    echo '<select name="emp_name" id="emp_name" class="mycss">';
-                                    echo '<option>select</option>';
-                                    while ($row = mysqli_fetch_assoc($result2)) {
-                                        echo '<option value="' . $row['emp_name'] . '">' . $row['emp_name'] . ' '  . '</option>';
-                                    }
-                                    echo '</select>';
-                                } else {
-                                    echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-                                }
-
-                                mysqli_close($conn);
-                                ?>
-
-                        
-                            
-                            <hr>
-                            <div class="row">
-                              <div class="col">
-                                <h6>Enter The Measurment of Shirt</h6>
-                                <label id="measurment">Height</label>
-                                <input type="text" id="height" name="height" required>
-                                <label id="measurment">Shoulder</label>
-                                <input type="text" id="shoulder" name="shoulder" required>
-                                <label id="measurment">Chest</label>
-                                <input type="text" id="chest" name="chest" required>
-                                <label id="measurment">Sleev</label>
-                                <input type="text" id="sleev" name="sleev" required>
-                                <br>
-                                <label id="measurment">Neck</label>
-                                <input type="text" id="neck" name="neck" required>
-                                <label id="measurment">Back.H</label>
-                                <input type="text" id="bh" name="bh" required>
-                                <label id="measurment">Fix-chest</label>
-                                <input type="text" id="fix" name="fix" required>
-                                <label id="measurment">Stomach</label>
-                                <input type="text" id="stomach" name="stomach" required>
-                                <br>
-                                <label id="measurment">Seat</label>
-                                <input type="text" id="seat" name="seat" required>
-                                <label id="measurment">Cuff</label>
-                                <input type="text" id="cuff" name="cuff" required>
-                                <label id="measurment">Collar</label>
-                                <input type="text" id="collar" name="collar" required>
-                                <br>
-                                <label id="measurment">Remark</label>
-                                <input type="text" id="rem" name="rem" class="mycss">
-                                <hr>
-                                <div class="centainer footer">
-                                <center>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="reset" class="btn btn-danger">Reset</button>
-                                  <input type="submit" class="btn btn-success" value="update" name="submit" id="submit">
-                                </center>
-                                <hr>
-                              </div>
-    
-                            </div>
-                          </div>
-                        </div>
-                            </div>
-                          </div>
-                    
-                      </form>
-                      <br>
- <!-- mal material end-->
-    </div><!--big-->
-  </div><!--modal-->
-</div><!--material-->
-<!-- edit modal end-->
-
-<!--Update modal start-->
-<div class="modal fade delete-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <!-- mal material-->
-
-        
-        
-        delete
-                                
-        
-        
-        
- <!-- mal material end-->
-    </div><!--big-->
-  </div><!--modal-->
-</div><!--material-->
+  
                               </div><!-- parent div-->
 
     <script src="https://kit.fontawesome.com/97ee402521.js" crossorigin="anonymous"></script>
