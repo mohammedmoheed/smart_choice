@@ -25,16 +25,18 @@ $sql = "INSERT INTO orders (`sr`,`type`,`cust_name`,`del_date`,`vendor`,`emp_nam
  VALUES (null,'$type','$cust_name','$del_date','$vendor','$emp_name','$height','$shoulder','$chest','$sleev'
 ,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem')";
 
-if($conn->query($sql) == TRUE){
-     echo '<script>
-                alert("Saved Successfully")
-                window.location ="register.php";
-            </script>';
-}
-else{
-    echo"failed to save";
+echo $conn->query($sql);
+
+// if($conn->query($sql) == TRUE){
+//      echo '<script>
+//                 alert("Saved Successfully")
+//                 window.location ="register.php";
+//             </script>';
+// }
+// else{
+//     echo"failed to save";
     
-}
+// }
 
 $conn->close();
 }

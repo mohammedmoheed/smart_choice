@@ -99,7 +99,10 @@ echo "</thead>";
                 <td>
                     <?php
                     if($row['status']==1) {
-                        echo '<p> <a href="status.php?sr='.$row['sr'].'&status=0" class="btn btn-success"> Complete </a> </p> ';
+                        echo '<p> <a href="status.php?sr='.$row['sr'].'&status=2" class="btn btn-success"> Complete </a> </p> ';
+                    }
+                    elseif($row['status']==2) {
+                        echo '<p> <a href="status.php?sr='.$row['sr'].'&status=0" class="btn btn-primary"> Delivered </a> </p> ';
                     }
                     else{
                         echo '<p> <a href="status.php?sr='.$row['sr'].'&status=1" class="btn btn-danger"> Incomplete </a> </p> ';
