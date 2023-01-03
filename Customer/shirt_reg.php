@@ -19,10 +19,11 @@ if(isset($_POST['submit'])){
     $collar = $_POST['collar'];
     $rem = $_POST['rem'];
 
+
 $sql = "INSERT INTO orders (`sr`,`type`,`cust_name`,`del_date`,`vendor`,`emp_name`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
-,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`,'status')
+,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`)
  VALUES (null,'$type','$cust_name','$del_date','$vendor','$emp_name','$height','$shoulder','$chest','$sleev'
-,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem',0)";
+,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem')";
 
 if($conn->query($sql) == TRUE){
      echo '<script>
