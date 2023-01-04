@@ -51,13 +51,13 @@
   font-size:70px;
 }
 
-#height,#shoulder,#chest,#sleev,#neck,#bh,#fix,#stomach,#seat,#cuff,#collar,#quantity{
+#height,#quantity,#shoulder,#chest,#sleev,#neck,#bh,#fix,#stomach,#seat,#cuff,#collar{
   width: 80px;
 
 }
 #rem.prem{
   width: 530px;
 }
-#pheight,#pseat,#waist,#thighs,#bottom,#fh,#sh,#pbh,#kn,#plates,#pocket{
+#pheight,#pquantity,#pseat,#waist,#thighs,#bottom,#fh,#sh,#pbh,#kn,#plates,#pocket{
   width: 80px;
 }
