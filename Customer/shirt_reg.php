@@ -7,6 +7,12 @@ if(isset($_POST['submit'])){
     $folder   = "dress_img/".$filename;
     move_uploaded_file($tempname,$folder);
 
+    $filename1 = $_FILES["uploadfile1"]["name"];
+    $tempname1 = $_FILES["uploadfile1"]["tmp_name"];
+    $folder1   = "paint_img/".$filename1;
+    move_uploaded_file($tempname1,$folder1);
+
+
     
     $type = $_POST['type'];
     $type1= implode(",",$type);
@@ -27,12 +33,30 @@ if(isset($_POST['submit'])){
     $cuff = $_POST['cuff'];
     $collar = $_POST['collar'];
     $rem = $_POST['rem'];
+    $paint_emp_name = $_POST['paint_emp_name'];
+    $paint_type = $_POST['paint_type'];
+    $paint_type1 = implode(",",$paint_type);
+    $pheight = $_POST['pheight'];
+    $pseat = $_POST['pseat'];
+    $waist = $_POST['waist'];
+    $thighs = $_POST['thighs'];
+    $bottom = $_POST['bottom'];
+    $fh = $_POST['fh'];
+    $sh = $_POST['sh'];
+    $pbh = $_POST['pbh'];
+    $kn = $_POST['kn'];
+    $plates = $_POST['plates'];
+    $pocket = $_POST['pocket'];
+    $prem = $_POST['prem'];
+
 
 
 $sql = "INSERT INTO orders (`sr`,`type`,`quantity`,`cust_name`,`del_date`,`vendor`,`emp_name`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
-,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`,`image`)
+,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`,`image`,`paint_emp_name`,`paint_type`,`pheight`
+,`pseat`,`waist`,`thighs`,`bottom`,`fh`,`sh`,`pbh`,`kn`,`plates`,`pocket`,`prem`,`paint_image`)
  VALUES (null,'$type1','$quantity','$cust_name','$del_date','$vendor','$emp_name','$height','$shoulder','$chest','$sleev'
-,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem','$folder')";
+,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem','$folder','$paint_emp_name','$paint_type1','$pheight
+','$pseat','$waist','$thighs','$bottom','$fh','$sh','$pbh','$kn','$plates','$pocket','$prem','$folder1')";
 
 echo $conn->query($sql);
 

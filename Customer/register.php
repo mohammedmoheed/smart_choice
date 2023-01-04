@@ -223,7 +223,7 @@ include('../connection.php');
                                 <label id="measurment">Height</label>
                                 <input type="text" id="pheight" name="pheight">
                                 <label id="measurment">Seat</label>
-                                <input type="text" id="seat" name="seat">
+                                <input type="text" id="pseat" name="pseat">
                                 <label id="measurment">Waist</label>
                                 <input type="text" id="waist" name="waist">
                                 <label id="measurment">Thighs</label>

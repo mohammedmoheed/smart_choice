@@ -117,13 +117,20 @@ echo "</thead>";
                 echo "<td>" . $row['emp_name'] . "</td>";
                 echo "<td>" . $row['time'] . "</td>";
                 echo "<td>" . $row['del_date'] . "</td>";
-                echo "<td><a href='#' class='btn btn-success btn-sm' data-toggle='modal' data-target='.edit-modal-lg'>
-                <i class='fa-solid fa-pen-to-square'></i> Edit</a>&nbsp;
-                <button type='button' class='btn btn-danger'
-                data-toggle='modal' data-target='.delete-modal-lg'><i class='fa-solid fa-trash'></i></button>
+                echo "<td><a href='order_update.php?id=$row[sr]'><i class='fa-solid fa-file-pen'></i></a>
+                <a href='order_delete.php?id=$row[sr]' onclick = 'return checkdelete()'><i class='fa-solid fa-trash' style='color:red;'></i></a>
                 </td>
                 ";
                 }
         }
     ?>
     </tbody>
+    <script>
+    function checkdelete()
+    {
+        return confirm('Are You Sure You want to delete?'); 
+    }
+</script>
+    </html>
+    </body>
+
