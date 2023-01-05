@@ -36,6 +36,7 @@ if(isset($_POST['submit'])){
     $paint_emp_name = $_POST['paint_emp_name'];
     $paint_type = $_POST['paint_type'];
     $paint_type1 = implode(",",$paint_type);
+    $pquantity =$_POST['pquantity'];
     $pheight = $_POST['pheight'];
     $pseat = $_POST['pseat'];
     $waist = $_POST['waist'];
@@ -52,13 +53,13 @@ if(isset($_POST['submit'])){
 
 
 $sql = "INSERT INTO orders (`sr`,`type`,`quantity`,`cust_name`,`del_date`,`vendor`,`emp_name`,`height`,`shoulder`,`chest`,`sleev`,`neck`,`bh`
-,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`,`image`,`paint_emp_name`,`paint_type`,`pheight`
+,`fix`,`stomach`,`seat`,`cuff`,`collar`,`rem`,`image`,`paint_emp_name`,`paint_type`,`pquantity`,`pheight`
 ,`pseat`,`waist`,`thighs`,`bottom`,`fh`,`sh`,`pbh`,`kn`,`plates`,`pocket`,`prem`,`paint_image`)
  VALUES (null,'$type1','$quantity','$cust_name','$del_date','$vendor','$emp_name','$height','$shoulder','$chest','$sleev'
-,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem','$folder','$paint_emp_name','$paint_type1','$pheight
+,'$neck','$bh','$fix','$stomach','$seat','$cuff','$collar','$rem','$folder','$paint_emp_name','$paint_type1','$pquantity','$pheight
 ','$pseat','$waist','$thighs','$bottom','$fh','$sh','$pbh','$kn','$plates','$pocket','$prem','$folder1')";
 
-echo $conn->query($sql);
+//echo $conn->query($sql);
 
  if($conn->query($sql) == TRUE){
      echo '<script>

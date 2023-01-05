@@ -61,3 +61,7 @@
 #pheight,#pquantity,#pseat,#waist,#thighs,#bottom,#fh,#sh,#pbh,#kn,#plates,#pocket{
   width: 80px;
 }
+.photo{
+  width: 150px;
+  height: 150 px;
+}

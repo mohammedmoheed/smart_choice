@@ -215,7 +215,7 @@ include('../connection.php');
                                 <input type="checkbox" name="paint_type[]" id="dhoti" Value="dhoti">
                                 <br>
                                 <label>Quantity</label>
-                                <input type="text" name="quantity" id="quantity">
+                                <input type="text" name="pquantity" id="pquantity">
                                 <br>
                                 <label>Upload file</label>
                                 <input type="file" name="uploadfile1">
