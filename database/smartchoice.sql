@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 03, 2023 at 06:49 PM
+-- Generation Time: Jan 05, 2023 at 06:32 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -78,7 +78,7 @@ INSERT INTO `employee` (`id`, `emp_name`, `mobile`, `city`, `payment`, `time`) V
 --
 
 CREATE TABLE `orders` (
-  `sr` bigint(20) UNSIGNED NOT NULL,
+  `sr` bigint(100) UNSIGNED NOT NULL,
   `type` varchar(80) NOT NULL,
   `quantity` varchar(20) NOT NULL,
   `cust_name` varchar(255) NOT NULL,
@@ -99,55 +99,32 @@ CREATE TABLE `orders` (
   `rem` varchar(255) NOT NULL,
   `image` varchar(400) NOT NULL,
   `time` timestamp(5) NOT NULL DEFAULT current_timestamp(5) ON UPDATE current_timestamp(5),
-  `status` int(1) NOT NULL
+  `status` int(1) NOT NULL,
+  `paint_emp_name` varchar(50) NOT NULL,
+  `paint_type` varchar(50) NOT NULL,
+  `pquantity` varchar(15) NOT NULL,
+  `pheight` varchar(5) NOT NULL,
+  `pseat` varchar(5) NOT NULL,
+  `waist` varchar(5) NOT NULL,
+  `thighs` varchar(5) NOT NULL,
+  `bottom` varchar(5) NOT NULL,
+  `fh` varchar(5) NOT NULL,
+  `sh` varchar(5) NOT NULL,
+  `pbh` varchar(5) NOT NULL,
+  `kn` varchar(5) NOT NULL,
+  `plates` varchar(5) NOT NULL,
+  `pocket` varchar(5) NOT NULL,
+  `prem` varchar(5) NOT NULL,
+  `paint_image` varchar(400) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`sr`, `type`, `quantity`, `cust_name`, `del_date`, `vendor`, `emp_name`, `height`, `shoulder`, `chest`, `sleev`, `neck`, `bh`, `fix`, `stomach`, `seat`, `cuff`, `collar`, `rem`, `image`, `time`, `status`) VALUES
-(6, '', '', 'ansari shahnawaz', '20/11/1998', 'zara-colaba', '', '25', '15', '15', '22', '15', '20', '36', '', '37', '3', '15', 'no pattern', '', '2023-01-03 16:43:16.35346', 0),
-(8, '', '', 'ansari shahnawaz', '20/11/1998', '1', '', '25', '15', '15', '22', '15', '20', '36', '35', '37', '3', '15', 'no pattern', '', '2023-01-03 16:43:04.38859', 0),
-(9, '', '', 'ansari shahnawaz', '20/11/1998', 'maaz', '', '25', '15', '15', '22', '15', '20', '36', '35', '37', '3', '15', 'yellow button', '', '2023-01-03 16:43:02.31550', 0),
-(10, '', '', 'Irfan Khan Quddus Khan Dehelvi', '20/11/1998', 'saad', '', '25', '15', '15', '22', '15', '20', '36', '35', '37', '3', '15', 'yellow button', '', '2022-12-28 07:24:16.90324', 0),
-(15, '', '', 'Gulam Husain Chacha', '29/12/2022', 'kashif', '', '125', '156', '15', '135', '156', '1586', '256', '1256', '5864', '584', '5', 'yellow button', '', '2022-12-29 08:58:56.67620', 0),
-(16, 'shirt', '', 'ansari shahnawaz', '25/12', 'saad', '', '20', '158', '6', '55', '555', '887', '78', '782', '568', '255', '5', 'not', '', '2022-12-29 12:04:13.42398', 0),
-(17, 'shirt', '', 'ansari shahnawaz', '25/12', 'saad', '', '20', '158', '6', '55', '555', '887', '78', '782', '568', '5', '5', 'not', '', '2023-01-03 06:29:03.25220', 0),
-(18, 'shirt', '', 'Gulam Husain Chacha', '2022-12-29', 'kashif', '', '20', '158', '6', '55', '555', '887', '78', '782', '568', '255', '5', 'not', '', '2023-01-03 14:15:26.29113', 0),
-(19, 'shirt', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-01', 'ansari shahnawaz', 'saud', '20', '11', '20', '21', '31', '25', '64', '25', '26', '25', '11', '24', '', '2023-01-03 14:15:34.36012', 0),
-(20, 'shirt', '', 'qadeer khan', '2022-12-31', 'SD mens wear', 'Ansari Shahbaz ', '20', '158', '6', '55', '555', '887', '78', '782', '568', '255', '5', 'not', '', '2023-01-03 06:31:14.34252', 0),
-(21, 'shirt', '', 'ansari shahnawaz', '2022-12-17', 'maaz', 'Ansari Shahbaz ', '20', '25', '230', '5', '55', '5', '5', '5', '5', '5', '5', '5', '', '2022-12-31 16:26:29.11657', 0),
-(22, 'shirt', '', 'ansari shahnawaz', '2023-01-04', 'kashif', 'Ansari Shahbaz ', '20', '158', '230', '55', '555', '887', '78', '782', '568', '5', '5', 'not', '', '2023-01-03 06:16:19.54754', 0),
-(23, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00.00000', 0),
-(24, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-01-03 06:25:58.66087', 0),
-(25, 'shirt', '', 'qadeer khan', '2023-01-05', 'kashif', 'sameed', '20', '25', '6', '55', '55', '887', '5', '5', '5', '5', '5', 'not', '', '2023-01-03 06:41:04.30233', 0),
-(26, 'shirt', '', 'ansari shahnawaz', '2023-01-13', 'saad', 'sameed', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '', '2023-01-03 06:54:30.53790', 0),
-(27, 'shirt', '', 'select', '', 'select', 'select', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-01-03 08:05:33.02985', 0),
-(28, 'shirt', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-19', 'saad', 'sameed', '20', '11', '25', '4585', '25', '256', '25', '625', '5', '25', '25', '5', '', '2023-01-03 09:39:10.84461', 0),
-(29, 'shirt', '', 'select', '', 'select', 'select', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-01-03 13:22:50.08007', 0),
-(30, '', '', 'qadeer khan', '2023-01-28', 'maaz', 'sameed', '25', '13', '32', '25', '15', '24', '26', '265', '2', '25', '25', '25', '', '2023-01-03 13:41:46.24002', 0),
-(31, '', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-15', 'SD mens wear', 'Ansari Shahbaz ', '2', '3', '4', '5', '6', '7', '8', '9', '1', '11', '12', '13', '', '2023-01-03 13:44:31.71876', 0),
-(32, 'shirt,kurta,sherwani,safari', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-07', 'kashif', 'saud', '25', '11', '32', '30', '18', '24', '23', '18', '25', '26', '23', '5', '', '2023-01-03 13:46:06.14507', 0),
-(33, 'shirt,kurta', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-06', 'saad', 'sameed', '2', '3', '', '', '', '', '', '', '', '', '', '', 'dress_img/adhar.jpg', '2023-01-03 14:43:06.36951', 0),
-(34, 'shirt', '', 'ansari shahnawaz', '2023-01-04', 'saad', 'sameed', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '', '2023-01-03 15:41:14.79250', 0),
-(35, 'shirt', '', 'ansari shahnawaz', '2022-12-31', 'ansari shahnawaz', 'saud', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '5', '1', '', '2023-01-03 16:22:23.80713', 0),
-(36, 'shirt', '', 'qadeer khan', '2023-01-21', 'kashif', 'Ansari Shahbaz ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '21', '5', '', '2023-01-03 16:26:11.71986', 0),
-(37, 'shirt', '', 'Irfan Khan Quddus Khan Dehelvi', '1987-11-20', 'maaz', 'saud', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '', '2023-01-03 16:33:11.12494', 0),
-(38, 'shirt', '', 'Irfan Khan Quddus Khan Dehelvi', '1987-11-20', 'maaz', 'saud', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '', '2023-01-03 16:33:11.12762', 0),
-(39, 'shirt,kurta', '', 'ansari shahnawaz', '2006-11-20', 'maaz', 'sameed', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '', '2023-01-03 16:38:08.02577', 0),
-(41, 'shirt,kurta,sherwani', '', 'ansari shahnawaz', '2023-02-03', 'saad', 'sameed', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '', '2023-01-03 16:39:29.45656', 0),
-(42, 'shirt,kurta,sherwani', '', 'ansari shahnawaz', '2023-02-03', 'saad', 'sameed', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '', '2023-01-03 16:39:29.45813', 0),
-(43, 'shirt,kurta,sherwani', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-11-20', 'maaz', 'sameed', '1', '2', '3', '4', '5', '6', '87', '8', '9', '10', '11', '25', '', '2023-01-03 16:40:29.17891', 0),
-(44, 'shirt,kurta,sherwani', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-11-20', 'maaz', 'sameed', '1', '2', '3', '4', '5', '6', '87', '8', '9', '10', '11', '25', '', '2023-01-03 16:40:29.18234', 0),
-(45, 'shirt,kurta,sherwani', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-22', 'kashif', 'Shahzad', '1', '12', '3', '65', '4', '5', '6', '8', '6', '6', '6', '25', '', '2023-01-03 16:47:51.51437', 0),
-(46, 'shirt,kurta,sherwani', '', 'Irfan Khan Quddus Khan Dehelvi', '2023-01-22', 'kashif', 'Shahzad', '1', '12', '3', '65', '4', '5', '6', '8', '6', '6', '6', '25', '', '2023-01-03 16:48:10.36440', 0),
-(47, 'shirt,kurta,sherwani', '4', 'ansari shahnawaz', '2022-12-30', 'saad', 'Shahzad', '1', '2', '3', '4', '5', '', '', '', '', '', '', '', '', '2023-01-03 16:53:15.47561', 0),
-(48, 'shirt,kurta,sherwani', '4', 'ansari shahnawaz', '2022-12-30', 'saad', 'Shahzad', '1', '2', '3', '4', '5', '', '', '', '', '', '', '', '', '2023-01-03 16:53:15.47775', 0),
-(49, 'shirt,kurta', '2', 'Irfan Khan Quddus Khan Dehelvi', '2033-11-20', 'kashif', 'Shahzad', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'dress_img/Haseeb pic.jpg', '2023-01-03 16:58:13.59045', 0),
-(50, 'shirt,kurta', '2', 'Irfan Khan Quddus Khan Dehelvi', '2033-11-20', 'kashif', 'Shahzad', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'dress_img/Haseeb pic.jpg', '2023-01-03 16:58:13.59300', 0),
-(51, 'shirt,kurta', '2', 'ansari shahnawaz', '2023-11-20', 'saad', 'Shahzad', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'dress_img/2.png', '2023-01-03 17:01:40.23211', 0),
-(52, 'shirt,kurta', '2', 'ansari shahnawaz', '2023-11-20', 'saad', 'Shahzad', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'dress_img/2.png', '2023-01-03 17:01:40.23507', 0);
+INSERT INTO `orders` (`sr`, `type`, `quantity`, `cust_name`, `del_date`, `vendor`, `emp_name`, `height`, `shoulder`, `chest`, `sleev`, `neck`, `bh`, `fix`, `stomach`, `seat`, `cuff`, `collar`, `rem`, `image`, `time`, `status`, `paint_emp_name`, `paint_type`, `pquantity`, `pheight`, `pseat`, `waist`, `thighs`, `bottom`, `fh`, `sh`, `pbh`, `kn`, `plates`, `pocket`, `prem`, `paint_image`) VALUES
+(87, 'shirt,kurta', '1', 'ansari shahnawaz', '2023-01-20', 'saad', 'sameed', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', 'dress_img/IMG-20230105-WA0001.jpg', '2023-01-05 17:11:58.36212', 0, 'sameed', 'paint,pajama', '14', '15\r\n', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', 'paint_img/IMG-20230105-WA0002.jpg'),
+(89, 'shirt,kurta,sherwani', '1', 'ansari shahnawaz', '2023-01-07', 'ansari shahnawaz', 'Ansari Shahbaz ', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', 'dress_img/', '2023-01-05 16:59:51.59613', 0, 'sameed', 'paint,pajama', '1', '14\r\n', '25', '1', '17', '18', '19', '20', '12', '22', '23', '24', '25', 'paint_img/');
 
 -- --------------------------------------------------------
 
@@ -249,7 +226,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `sr` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `sr` bigint(100) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT for table `test`
