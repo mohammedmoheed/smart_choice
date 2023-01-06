@@ -27,7 +27,7 @@ if(isset($_POST['update'])){
     $collar = $_POST['collar'];
     $rem = $_POST['rem'];
 
-$sql = "UPDATE orders  set cust_name='$cust_name',del_date='$del_date',vendor='$vendor',emp_name='$emp_name',
+$sql = "UPDATE orders set cust_name='$cust_name',del_date='$del_date',vendor='$vendor',emp_name='$emp_name',
 height='$height',shoulder='$shoulder',chest='$chest',sleev='$sleev',neck='$neck',
 bh='$bh',fix='$fix',stomach='$stomach',seat='$seat',cuff='$cuff',
 collar='$collar',rem='$rem', where sr='$id'";
@@ -37,7 +37,7 @@ if ($conn->query($sql4) === TRUE) {
     <script>
         alert('Record Updated Succeefully');
         </script>
-        <meta http-equiv = "refresh" content = "0; url = http://localhost/smart_choice/customer/register.php" />
+        <meta http-equiv = "refresh" content = "0; url = http://localhost/smart_choice/Customer/register.php " />
         <?php
   //echo "New record created successfully";
 } else {

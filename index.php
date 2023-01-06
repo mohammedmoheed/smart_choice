@@ -76,7 +76,16 @@ include('./connection.php');
                   <i class="fa-solid fa-cart-arrow-down fa-4x"></i>
                 </div>
                 <div class="col">
-                  <h3 class="display-3">08</h3>
+                <?php
+                  $date = date("Y-m-d");
+                  $customer = "SELECT * FROM orders WHERE status=1 OR status=0 AND del_date < $date";
+                  $customer_run = mysqli_query($conn, $customer);
+                  if($customer_count = mysqli_num_rows($customer_run)){
+                    echo '<h3 class="display-3">'.$customer_count.'</h3>';
+                  }else{
+                    echo '<h3 class="display-3">0</h3>';
+                  }
+                  ?>
                   <h5>Due Orders</h5>
                 </div>
               </div>
