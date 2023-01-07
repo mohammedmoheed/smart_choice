@@ -116,7 +116,7 @@ if ($conn->query($sql) === TRUE) {
     <div class="row">
       <div class="col-sm-12">
         <hr>
-      <form id="form1" action="#" method="post" enctype="multipart/form-data">
+      <form id="form1" action="order_update1.php" method="post" enctype="multipart/form-data">
                       
                       <label>Customer Name:</label>
                       <?php
