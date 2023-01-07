@@ -119,6 +119,8 @@ echo "</thead>";
                 echo "<td>" . $row['del_date'] . "</td>";
                 echo "<td><a href='order_update.php?id=$row[sr]'><i class='fa-solid fa-file-pen'></i></a>
                 <a href='order_delete.php?id=$row[sr]' onclick = 'return checkdelete()'><i class='fa-solid fa-trash' style='color:red;'></i></a>
+                <a href='order_view.php?id=$row[sr]'><i class='fa-solid fa-eye'></i></a>
+                <a href='bill.php?id=$row[sr]'><i class='fa-solid fa-print'></i></i></a>
                 </td>
                 ";
                 }

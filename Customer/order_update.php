@@ -31,8 +31,8 @@ $rtype1 = explode(",",$rtype);
 //for paint
 $rtype2 =$rowedit["paint_type"];
 $rtype3 = explode(",",$rtype2);
- // $type = $_POST['type'];
- // $type1 = implode(",",$type);
+  $type = $_POST['type'];
+  $type1 = implode(",",$type);
   $quantity = $_POST['quantity'];
   $cust_name = $_POST['cust_name'];
   $del_date = $_POST['del_date'];
@@ -78,10 +78,9 @@ if ($conn->query($sql) === TRUE) {
     ?>
     <script>
         alert('Record Updated Succeefully');
-      // window.location ="register.php";
+        window.location ="register.php";
         </script>
         <?php
-  //echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -385,7 +384,6 @@ if ($conn->query($sql) === TRUE) {
       <center>
                                   <button type="reset" class="btn btn-danger">Reset</button>
                                   <input type="submit" class="btn btn-success" value="Submit" name="submit" id="submit">
-                                  <input type="btn" class="btn btn-success" value="Print" name="print" id="print">
                                 </center>
 
                               </div>
