@@ -59,8 +59,8 @@ include('./connection.php');
             </div>
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-primary"
-                  >Check orders&nbsp;<i
+                <a href="./delivered/delivered.php" class="text-primary"
+                  >Delivered orders&nbsp;<i
                     class="fa-solid fa-circle-arrow-right"
                   ></i
                 ></a>
@@ -78,7 +78,7 @@ include('./connection.php');
                 <div class="col">
                 <?php
                   $date = date("Y-m-d");
-                  $customer = "SELECT * FROM orders WHERE status=1 OR status=0 AND del_date < $date";
+                  $customer = "SELECT * FROM `orders` WHERE `status` IN (0,1) AND `del_date`<'$date'";
                   $customer_run = mysqli_query($conn, $customer);
                   if($customer_count = mysqli_num_rows($customer_run)){
                     echo '<h3 class="display-3">'.$customer_count.'</h3>';
@@ -92,7 +92,7 @@ include('./connection.php');
             </div>
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-primary"
+                <a href="./due/due.php" class="text-primary"
                   >Check Due Orders&nbsp;<i
                     class="fa-solid fa-circle-arrow-right"
                   ></i
@@ -124,7 +124,7 @@ include('./connection.php');
             </div>
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-primary"
+                <a href="./pending/pending.php" class="text-primary"
                   >Pending Orders&nbsp;<i
                     class="fa-solid fa-circle-arrow-right"
                   ></i
@@ -156,8 +156,8 @@ include('./connection.php');
             </div>
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-primary"
-                  >Check Orders&nbsp;<i
+                <a href="./completed/completed.php" class="text-primary"
+                  >Completed Orders&nbsp;<i
                     class="fa-solid fa-circle-arrow-right"
                   ></i
                 ></a>
@@ -312,8 +312,9 @@ include('./connection.php');
       src="https://kit.fontawesome.com/97ee402521.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/counter.js"></script>
-    <script src="js/jQuery.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/jQuery.js"></script>
+    
   </body>
 </html>
 

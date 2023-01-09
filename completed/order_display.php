@@ -2,7 +2,7 @@
 <?php
 include('../connection.php');
 $date = date("Y-m-d");
-$display = mysqli_query($conn, "SELECT * FROM orders");
+$display = mysqli_query($conn, "SELECT * FROM `orders` WHERE `status`=1;");
 ?>
 <form action="" method="GET">
     <div class="row">
@@ -31,24 +31,25 @@ echo "<h5>order Recieved</h5>";
 echo "<table id='myTable' class='table table-striped table-bordered' style='width:100%'>";
 
 echo "<thead>";
-echo "<th width='7%'>Status</th>";
-echo "<th width='5%'>id</th>";           
-echo "<th width='8%'>Type</th>";
-echo "<th width='5%'>QT</th>";
-echo "<th width='8%'>Employee</th>";
-echo "<th width='8%'>P_Type</th>";
-echo "<th width='5%'>P_QT</th>";
-echo "<th width='8%'>P_Employee</th>";      
-echo "<th width='10%'>Customer</th>";
-echo "<th width='10%'>vendor</th>";
-echo "<th width='8%'>Order Date</th>";
-echo "<th width='8%'>Delivery Date</th>";
-echo "<th width='10%'>Action</th>";
+echo "<th>Status</th>";
+echo "<th width='4%'>id</th>";           
+echo "<th width='3%'>Type</th>";
+echo "<th width='3%'>QT</th>";
+echo "<th width='10%'>Employee</th>";
+echo "<th width='3%'>P_Type</th>";
+echo "<th width='3%'>P_QT</th>";
+echo "<th width='10%'>P_Employee</th>";             
+echo "<th width='20%'>Customer Name</th>";
+echo "<th width='15%'>vendor name</th>";
+echo "<th width='15%'>Date of order</th>";
+echo "<th width='10%'>date of Delivary</th>";
+echo "<th width='16%'>Action</th>";
 
 echo "</thead>";
 ?>
 <tbody>
 <?php 
+
         if(isset($_GET['from_date']) && isset($_GET['to_date']))
         {
             $from_date = $_GET['from_date'];
@@ -83,7 +84,8 @@ echo "</thead>";
                         <td><?= $row['paint_emp_name']; ?></td>
                         <td><?= $row['cust_name']; ?></td>
                         <td><?= $row['vendor']; ?></td>
-                        <td><?= $date ; ?></td>
+                        
+                        <td><?= $date; ?></td>
                         <td><?= $row['del_date']; ?></td>
                 <?php   echo "<td><a href='#' class='btn btn-success btn-sm' data-toggle='modal' data-target='.edit-modal-lg'>
                         <i class='fa-solid fa-pen-to-square'></i> Edit</a>&nbsp;
@@ -103,8 +105,8 @@ echo "</thead>";
         }
         else{
             while ($row = mysqli_fetch_assoc($display)) {
-                echo "<tr>";
                 $date = date("Y-m-d",strtotime($row['time']));
+                echo "<tr>";
                 ?>
                 
                 <td>
@@ -129,7 +131,7 @@ echo "</thead>";
                 echo "<td>" . $row['pquantity'] . "</td>";
                 echo "<td>" . $row['paint_emp_name'] . "</td>";
                 echo "<td>" . $row['cust_name'] . "</td>";
-                echo "<td>" . $row['paint_emp_name'] . "</td>";
+                echo "<td>" . $row['vendor'] . "</td>";  
                 echo "<td>" . $date . "</td>";
                 echo "<td>" . $row['del_date'] . "</td>";
                 echo "<td><a href='order_update.php?id=$row[sr]'><i class='fa-solid fa-file-pen'></i></a>

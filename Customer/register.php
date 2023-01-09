@@ -25,6 +25,9 @@ include('../connection.php');
         height:30px;
         width:250px;
       }
+      .display_section{
+        margin: 0px;
+      }
   
     </style>
 </head>
@@ -49,10 +52,10 @@ include('../connection.php');
         <div class="container order_panel_child">
             <h6>Select the Dress Type</h6>
             <select id="formSel">
-                <option value="-">Select a form</option>
-                <option value="1">Shirt</option>
-                <option value="2">Form 2</option>
-                <option value="3">Form 3</option>
+                <option value="-">Click to Order</option>
+                <option value="1">Order</option>
+                <!-- <option value="2">Form 2</option>
+                <option value="3">Form 3</option> -->
               </select>
               
               <div id="myModal" class="modal fade">

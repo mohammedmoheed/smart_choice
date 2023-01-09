@@ -1,72 +1,73 @@
-.sec{
-    background-color: rgb(59, 54, 54);
-    width: 100%;
-    height:800px;
-  }
-  .logo{
-    text-align: center;
-  }
-  .brand{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: white;
-  }
-  .bill{
-    background-color: rgb(85, 70, 68);
-    height: 680px;
-  }
+.sec {
+  background-color: rgb(2, 20, 27);
+  width: 100%;
+  height: 800px;
+}
+.logo {
+  text-align: center;
+}
+.brand {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+.bill {
+  background-color: rgb(75, 36, 33);
+  height: 680px;
+}
 
-  .address-line{
-    background-color: rgb(192, 62, 62);
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .info-section{
-    color: white;
-    font-weight: bold;
-    margin-top: 6px;
-  }
-  .info-section1{
-    color: white;
-    font-weight: bold;
-    margin-top: 6px;
-    text-align: right;
-  }
-  .info-section.input{
-    border-radius: 8px;
-  }
-  .name-sec{
-    color: white;
-    font-weight: bold;
-    margin-top: 6px;
-  }
-  #name{
-    width: 340px;
-  }
-  .date{
-    color: white;
-    font-weight: bold;
-  }
-  #d1{
-    width: 260px;
-  }
-  #q1{
-    width: 380px;
-  }
-  #q2{
-    width: 60px;
-  }
-  #rates{
-    width: 60px;
-  }
-  .amount-sec{
-    text-align: right;
-    color: white;
-    font-weight: bold;
-  }
-  .table,th{
-    color: white;
-  }
+.address-line {
+  background-color: rgb(192, 62, 62);
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.info-section {
+  color: white;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.info-section1 {
+  color: white;
+  font-weight: bold;
+  margin-top: 6px;
+  text-align: right;
+}
+.info-section.input {
+  border-radius: 8px;
+}
+.name-sec {
+  color: white;
+  font-weight: bold;
+  margin-top: 6px;
+}
+#name {
+  width: 340px;
+}
+.date {
+  color: white;
+  font-weight: bold;
+}
+#d1 {
+  width: 260px;
+}
+#q1 {
+  width: 380px;
+}
+#q2 {
+  width: 60px;
+}
+#rates {
+  width: 60px;
+}
+.amount-sec {
+  text-align: right;
+  color: white;
+  font-weight: bold;
+}
+.table,
+th {
+  color: white;
+}
