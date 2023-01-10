@@ -60,10 +60,6 @@ $pQT1 = explode(",",$pQT);
             <label>Bill No:</label>
             <input type="text" value="<?php echo $rowview['sr']?>" disabled>
         </div><!--info-section-->
-        <div class="col-md-6 info-section1">
-            <h7>Mobile Number:</h7>
-            <input type="text" value="" disabled>
-        </div><!--info section1-->
     </div><!--end row4-->
     <div class="row">
         <div class="col-md-12 name-sec">
@@ -82,7 +78,7 @@ $pQT1 = explode(",",$pQT);
         </div>
         <div class="col-md-4 date">
             <label>Delivared Date</label>
-            <input type="date" value="" disabled>
+            <input type="date" value="">
         </div>
     </div><!--row6-->
     <div class="row">

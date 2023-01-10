@@ -49,7 +49,7 @@ include('../connection.php');
         </div>
       </div>
       <div class="container-fluid order_panel responsive">
-        <div class="container order_panel_child">
+        <div class="container-fluid order_panel_child">
             <h6>Select the Dress Type</h6>
             <select id="formSel">
                 <option value="-">Click to Order</option>

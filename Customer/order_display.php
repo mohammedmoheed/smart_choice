@@ -31,19 +31,19 @@ echo "<h5>order Recieved</h5>";
 echo "<table id='myTable' class='table table-striped table-bordered' style='width:100%'>";
 
 echo "<thead>";
-echo "<th width='7%'>Status</th>";
-echo "<th width='5%'>id</th>";           
-echo "<th width='8%'>Type</th>";
-echo "<th width='5%'>QT</th>";
-echo "<th width='8%'>Employee</th>";
-echo "<th width='8%'>P_Type</th>";
-echo "<th width='5%'>P_QT</th>";
-echo "<th width='8%'>P_Employee</th>";      
-echo "<th width='10%'>Customer</th>";
-echo "<th width='10%'>vendor</th>";
-echo "<th width='8%'>Order Date</th>";
-echo "<th width='8%'>Delivery Date</th>";
-echo "<th width='10%'>Action</th>";
+echo "<th>Status</th>";
+echo "<th>id</th>";           
+echo "<th class='ncss'>Type</th>";
+echo "<th >QT</th>";
+echo "<th >Employee</th>";
+echo "<th >P_Type</th>";
+echo "<th >P_QT</th>";
+echo "<th >P_Employee</th>";      
+echo "<th >Customer</th>";
+echo "<th >vendor</th>";
+echo "<th >Order Date</th>";
+echo "<th >Delivery Date</th>";
+echo "<th >Action</th>";
 
 echo "</thead>";
 ?>
