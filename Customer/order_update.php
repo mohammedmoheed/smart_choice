@@ -25,14 +25,26 @@ $rtype3 = explode(",",$rtype2);
 <?php
 if(isset($_POST['submit'])){
   //for shirt
-$rtype = $rowedit["type"];
-$rtype1 = explode(",",$rtype);
+  //$rtype = $rowedit["type"];
+  //$rtype1 = explode(",",$rtype);
 //print_r($rtype1);
 //for paint
-$rtype2 =$rowedit["paint_type"];
-$rtype3 = explode(",",$rtype2);
+  //$rtype2 =$rowedit["paint_type"];
+  //$rtype3 = explode(",",$rtype2);
+$filename = $_FILES["uploadfile"]["name"];
+$tempname = $_FILES["uploadfile"]["tmp_name"];
+$folder   = "dress_img/".$filename;
+move_uploaded_file($tempname,$folder);
+
+$filename1 = $_FILES["uploadfile1"]["name"];
+$tempname1 = $_FILES["uploadfile1"]["tmp_name"];
+$folder1   = "paint_img/".$filename1;
+move_uploaded_file($tempname1,$folder1);
+
   $type = $_POST['type'];
   $type1 = implode(",",$type);
+  $rtype2 =$_POST['paint_type'];
+  $rtype3 = implode(",",$rtype2);
   $quantity = $_POST['quantity'];
   $cust_name = $_POST['cust_name'];
   $del_date = $_POST['del_date'];
@@ -67,7 +79,7 @@ $rtype3 = explode(",",$rtype2);
 
   //type='$type1', have to set
 
-$sql = " UPDATE orders set quantity='$quantity' , cust_name='$cust_name', del_date='$del_date',
+$sql = " UPDATE orders set type='$type1' , paint_type='$rtype3',image='$folder' ,paint_image='$folder1' , quantity='$quantity' , cust_name='$cust_name', del_date='$del_date',
 vendor='$vendor',emp_name='$emp_name',height='$height',shoulder='$shoulder',chest='$chest'
 ,sleev='$sleev',neck='$neck',bh='$bh',fix='$fix',stomach='$stomach',seat='$seat',cuff='$cuff',collar='$collar',rem='$rem'
 ,paint_emp_name='$paint_emp_name',pquantity='$pquantity',pheight='$pheight',pseat='$pseat',waist='$waist'

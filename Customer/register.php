@@ -32,22 +32,20 @@ include('../connection.php');
     </style>
 </head>
 <body>
-    <div class="container-fluid top">
+<div class="container-fluid">
         <div class="row">
-          <div class="col-sm-9">
-            <h5>Order</h5>
-          </div>
-          <div class="col-sm-3 social" id="social">
-            <ul>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            </ul>
-          </div>
+            <div class="col-md-12 navbar">
+                <a href="index.php" class="logo navbar-brand text-white offset-md-1"><b>Smart Choice Men's Wear</b></a>
+                <ul class="nav offset-md-2">
+                    <li class="nav-item"><a href="../index.php" class="nav-link">Home</a></li>
+                    <li class="nav-item "><a href="../customer/register.php" class="nav-link">Orders</a></li>
+                    <li class="nav-item"><a href="../customer/customer.php" class="nav-link">Customer</a></li>
+                    <li class="nav-item"><a href="../employee/employee.php" class="nav-link">Employee</a></li>
+                    <li class="nav-item"><a href="../backup.php" class="nav-link">Backup</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </div>
       <div class="container-fluid order_panel responsive">
         <div class="container-fluid order_panel_child">
             <h6>Select the Dress Type</h6>
@@ -86,6 +84,7 @@ include('../connection.php');
                                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                                 }
                                 ?>
+                                <a href="../employee/employee.php" id="plus"><i class="fa-solid fa-circle-plus fa-2x"></i></a>  
                         <div class="row">
                           <div class="col">
                             <label>Date of Delivary</label>
@@ -283,6 +282,7 @@ include('../connection.php');
   </div>
   
                               </div><!-- parent div-->
+
 
     <script src="https://kit.fontawesome.com/97ee402521.js" crossorigin="anonymous"></script>
     <script src="../js/jQuery.js"></script>

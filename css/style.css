@@ -3,23 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
-.top {
-  background-color: #1080b4;
-  padding-top: 6px;
-  padding: auto;
-  color: white;
+.navbar{
+  background-color: rgb(44, 117, 201);
 }
-.top p {
+.nav-link{
   font-size: 18px;
 }
-.social {
-  font-size: 20px;
-  text-align: right;
-  padding-right: 8px;
+a{
+  text-decoration:none;
+  color: rgb(247, 247, 252);
+
 }
-.social a {
-  color: rgb(253, 252, 250);
+a:hover{
+  color: rgb(29, 184, 119);
+  text-decoration: none;
 }
+ 
 /* Just for styling */
 .styling {
   background: #f5f5f5;
@@ -31,7 +30,7 @@
   overflow: auto;*/
 }
 .order_panel {
-  background-image: url(../images/shirt.jpg);
+  background-color: #b7ddee;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,7 +40,7 @@
 }
 .order_panel_child {
   padding-top: 30px;
-  background-color: rgba(238, 241, 243, 0.9);
+  background-color: rgba(238, 241, 243, 0.8);
   border-radius: 12px;
 }
 .label {
@@ -82,4 +81,16 @@
 .photo {
   width: 150px;
   height: 150px;
+}
+#plus{
+  color: rgb(50, 118, 163);
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(44, 117, 201);
+  color: white;
+  text-align: center;
 }

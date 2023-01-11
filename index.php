@@ -17,21 +17,19 @@ include('./connection.php');
     <title>Smart Choice Dashboard</title>
   </head>
   <body>
-    <div class="container-fluid top">
-      <div class="row">
-        <div class="col-sm-9">
-          <h5>Dashboard</h5>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 navbar">
+                <a href="index.php" class="logo navbar-brand text-white offset-md-1"><b>Smart Choice Men's Wear</b></a>
+                <ul class="nav offset-md-2">
+                    <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="customer/register.php" class="nav-link">Orders</a></li>
+                    <li class="nav-item"><a href="customer/customer.php" class="nav-link">Customer</a></li>
+                    <li class="nav-item"><a href="employee/employee.php" class="nav-link">Employee</a></li>
+                    <li class="nav-item"><a href="backup.php" class="nav-link">Backup</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-sm-3 social" id="social">
-          <ul>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </ul>
-        </div>
-      </div>
     </div>
 
     <div class="container mt-5">

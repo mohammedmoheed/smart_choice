@@ -34,6 +34,16 @@ $pQT1 = explode(",",$pQT);
       display:inline-block;
       }
     </style>
+    <script>
+function add()
+{
+  var qt, rate, tot;
+  qt = parseInt(document.getElementById("qt").value);
+  rate = parseInt(document.getElementById("rate").value);
+  tot = qt * rate;
+  document.getElementById("tot").value = tot;
+}
+</script>
 </head>
 <body>
     <div class="container-fluid sec"><!--fluid-->
@@ -129,6 +139,7 @@ $pQT1 = explode(",",$pQT);
             <input type="text" value="" disabled><br>
             <label>Ballence</label>
             <input type="text" value="" disabled><br>
+            <button onclick="add()">Add</button>
 
 
         </div>
