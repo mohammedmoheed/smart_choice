@@ -52,6 +52,7 @@
 			</div>
 			<div class="row">
 				<a href="#addnew" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New</a>
+				<a href="../index.php"><button type="button" class="btn btn-primary">Back to Home</button></a>
 				
 			</div>
 			<div class="height10">
