@@ -23,8 +23,8 @@ include('./connection.php');
                 <a href="index.php" class="logo navbar-brand text-white offset-md-1"><b>Smart Choice Men's Wear</b></a>
                 <ul class="nav offset-md-2">
                     <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="customer/register.php" class="nav-link">Orders</a></li>
-                    <li class="nav-item"><a href="customer/customer.php" class="nav-link">Customer</a></li>
+                    <li class="nav-item"><a href="Customer/register.php" class="nav-link">Orders</a></li>
+                    <li class="nav-item"><a href="Customer/customer.php" class="nav-link">Customer</a></li>
                     <li class="nav-item"><a href="employee/employee.php" class="nav-link">Employee</a></li>
                     <li class="nav-item"><a href="backup.php" class="nav-link">Backup</a></li>
                 </ul>

@@ -18,6 +18,11 @@ $sQT1 = explode(",",$sQT);
 $pQT = $rowview["pquantity"];
 $pQT1 = explode(",",$pQT);
 
+$rate = [];
+for($i=0; $i<sizeof($rtype1)+sizeof($paint_type1); $i++){
+    $rate[$i]= 0;
+}
+//echo implode(',',$rate);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +39,7 @@ $pQT1 = explode(",",$pQT);
       display:inline-block;
       }
     </style>
+    
 </head>
 <body>
     <div class="container-fluid sec"><!--fluid-->
@@ -60,10 +66,6 @@ $pQT1 = explode(",",$pQT);
             <label>Bill No:</label>
             <input type="text" value="<?php echo $rowview['sr']?>" disabled>
         </div><!--info-section-->
-        <div class="col-md-6 info-section1">
-            <h7>Mobile Number:</h7>
-            <input type="text" value="" disabled>
-        </div><!--info section1-->
     </div><!--end row4-->
     <div class="row">
         <div class="col-md-12 name-sec">
@@ -82,7 +84,7 @@ $pQT1 = explode(",",$pQT);
         </div>
         <div class="col-md-4 date">
             <label>Delivared Date</label>
-            <input type="date" value="" disabled>
+            <input type="date" value="">
         </div>
     </div><!--row6-->
     <div class="row">
@@ -102,9 +104,9 @@ $pQT1 = explode(",",$pQT);
                 <tr>
                 <td><input type="text" value=" <?php echo "$rtype1[$i]"
                          ?>" id="id"></td>
-                <td><input type="text"  value="<?php echo "$sQT1[$i]"?>" id="qt"></td>
-                <td><input type="text" value="" id="rate"></td>
-                <td><input type="text" value="" id="tot"></td>
+                <td><input type="text"  value="<?php echo "$sQT1[$i]"?>" class="qt"></td>
+                <td><input type="text" value="<?php echo "$rate[$i]"?>" class="rate" onchange="add()"></td>
+                <td><input type="text"  value="0" class="tot"></td>
             </tr> <?php
             } 
             ?>
@@ -113,9 +115,9 @@ $pQT1 = explode(",",$pQT);
                 <tr>
                 <td><input type="text" value=" <?php echo "$paint_type1[$i]"
                          ?>" id="id"></td>
-                <td><input type="text"  value="<?php echo "$pQT1[$i]"?>" id="qt"></td>
-                <td><input type="text" value="" id="rate"></td>
-                <td><input type="text" value="" id="tot"></td>
+                <td><input type="text"  value="<?php echo "$pQT1[$i]"?>" class="qt"></td>
+                <td><input type="text" value="<?php echo "$rate[$i]"?>" class="rate" onchange="add()"></td>
+                <td><input type="text"  value="0" class="tot"></td>
             </tr> <?php
             } 
             ?>
@@ -127,17 +129,43 @@ $pQT1 = explode(",",$pQT);
     <hr>
     <div class="row">
         <div class="col-md-12 amount-sec">
-            <label>Total</label>
-            <input type="text" value="" disabled><br>
+           
             <label>Advanced</label>
-            <input type="text" value="" disabled><br>
+            <input type="text" id="advance" value ="0" onchange="add()"><br>
             <label>Ballence</label>
-            <input type="text" value="" disabled><br>
+            <input type="text" id="balance" value ="0" onchange="add()"><br>
+            <label>Total</label>
+            <input type="text" id="gtotal" value ="0" onchange="add()"><br>
+          
+            
+            <button onclick="add()">Add</button>
 
 
         </div>
     </div><!--row8-->
         </div><!--end-bill-->
     </div><!--end-fluid-->
+
+    <script>
+        
+  var qt = document.getElementsByClassName('qt');
+  var rate = document.getElementsByClassName('rate');
+  var tot = document.getElementsByClassName('tot');
+  var gtotal = document.getElementById("gtotal");
+  var advance = document.getElementById("advance");
+  var balance = document.getElementById("balance");
+function add()
+{
+    gt=0;
+  for(i=0;i<rate.length;i++){
+    tot[i].value=(rate[i].value)*(qt[i].value); 
+
+    gt= gt+ (rate[i].value)*(qt[i].value);
+  }
+  gtotal.value = gt;
+  balance.value = gt - advance.value; 
+}
+ add();
+</script>
 </body>
 </html>

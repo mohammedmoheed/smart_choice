@@ -84,7 +84,7 @@ include('../connection.php');
                                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                                 }
                                 ?>
-                                <a href="../employee/employee.php" id="plus"><i class="fa-solid fa-circle-plus fa-2x"></i></a>  
+                                <a href="../Customer/customer.php" id="plus"><i class="fa-solid fa-circle-plus fa-2x"></i></a>  
                         <div class="row">
                           <div class="col">
                             <label>Date of Delivary</label>
