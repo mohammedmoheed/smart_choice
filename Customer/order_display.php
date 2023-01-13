@@ -1,4 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+</head>
+<body>
 <?php
 include('../connection.php');
 $date = date("Y-m-d");
@@ -28,22 +36,22 @@ $display = mysqli_query($conn, "SELECT * FROM orders");
 </form>
 <?php
 echo "<h5>order Recieved</h5>";
-echo "<table id='myTable' class='table table-striped table-bordered' style='width:100%'>";
+echo "<table id='myTable' class='table table-striped table-bordered'>";
 
 echo "<thead>";
-echo "<th>Status</th>";
-echo "<th>id</th>";           
-echo "<th class='ncss'>Type</th>";
-echo "<th >QT</th>";
-echo "<th >Employee</th>";
-echo "<th >P_Type</th>";
-echo "<th >P_QT</th>";
-echo "<th >P_Employee</th>";      
-echo "<th >Customer</th>";
-echo "<th >vendor</th>";
-echo "<th >Order Date</th>";
-echo "<th >Delivery Date</th>";
-echo "<th >Action</th>";
+echo "<th width='5%'>Status</th>";
+echo "<th width='3%'>id</th>";           
+echo "<th width='7%'>Type</th>";
+echo "<th width='3%'>QT</th>";
+echo "<th width='10%'>Employee</th>";
+echo "<th width='5%'>P_Type</th>";
+echo "<th width='5%'>P_QT</th>";
+echo "<th width='12%'>P_Employee</th>";      
+echo "<th width='10%'>Customer</th>";
+echo "<th width='10%'>vendor</th>";
+echo "<th width='10%'>Order Date</th>";
+echo "<th width='10%'>Delivery Date</th>";
+echo "<th width='20%'>Action</th>";
 
 echo "</thead>";
 ?>

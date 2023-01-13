@@ -28,6 +28,17 @@ include('../connection.php');
       .display_section{
         margin: 0px;
       }
+      #myTable {
+  table-layout: fixed;
+  width: 120% !important;
+}
+#myTable td,
+#myTable th{
+  width: auto !important;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
   
     </style>
 </head>
@@ -266,8 +277,6 @@ include('../connection.php');
                           </div>
 
                       </form>
-                      <form id="form2"><input type="text" value="form 2" /></form>
-                      <form id="form3"><input type="text" value="form 3" /></form>
                     </div>
                   </div><!-- .modal-content -->
                 </div><!-- .modal-dialog -->

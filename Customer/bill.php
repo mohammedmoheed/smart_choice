@@ -103,10 +103,10 @@ for($i=0; $i<sizeof($rtype1)+sizeof($paint_type1); $i++){
             for ($i=0; $i<sizeof($rtype1); $i++){ ?> 
                 <tr>
                 <td><input type="text" value=" <?php echo "$rtype1[$i]"
-                         ?>" id="id"></td>
-                <td><input type="text"  value="<?php echo "$sQT1[$i]"?>" class="qt"></td>
+                         ?>" id="id" disabled></td>
+                <td><input type="text"  value="<?php echo "$sQT1[$i]"?>" class="qt" disabled></td>
                 <td><input type="text" value="<?php echo "$rate[$i]"?>" class="rate" onchange="add()"></td>
-                <td><input type="text"  value="0" class="tot"></td>
+                <td><input type="text"  value="0" class="tot" disabled></td>
             </tr> <?php
             } 
             ?>
@@ -114,10 +114,10 @@ for($i=0; $i<sizeof($rtype1)+sizeof($paint_type1); $i++){
             for ($i=0; $i<sizeof($paint_type1); $i++){ ?> 
                 <tr>
                 <td><input type="text" value=" <?php echo "$paint_type1[$i]"
-                         ?>" id="id"></td>
-                <td><input type="text"  value="<?php echo "$pQT1[$i]"?>" class="qt"></td>
+                         ?>" id="id" disabled></td>
+                <td><input type="text"  value="<?php echo "$pQT1[$i]"?>" class="qt" disabled></td>
                 <td><input type="text" value="<?php echo "$rate[$i]"?>" class="rate" onchange="add()"></td>
-                <td><input type="text"  value="0" class="tot"></td>
+                <td><input type="text"  value="0" class="tot" disabled></td>
             </tr> <?php
             } 
             ?>
@@ -133,12 +133,12 @@ for($i=0; $i<sizeof($rtype1)+sizeof($paint_type1); $i++){
             <label>Advanced</label>
             <input type="text" id="advance" value ="0" onchange="add()"><br>
             <label>Ballence</label>
-            <input type="text" id="balance" value ="0" onchange="add()"><br>
+            <input type="text" id="balance" value ="0" onchange="add()" disabled><br>
             <label>Total</label>
-            <input type="text" id="gtotal" value ="0" onchange="add()"><br>
+            <input type="text" id="gtotal" value ="0" onchange="add()" disabled><br>
           
             
-            <button onclick="add()">Add</button>
+            <button onclick="add()">Get Total</button>
 
 
         </div>
